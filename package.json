@@ -32,5 +32,6 @@
   "bugs": {
     "url": "https://github.com/KevinHJo/DiscordClone/issues"
   },
-  "homepage": "https://github.com/KevinHJo/DiscordClone#readme"
+  "homepage": "https://github.com/KevinHJo/DiscordClone#readme",
+  "devDependencies": {}
 }

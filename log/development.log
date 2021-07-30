@@ -1042,3 +1042,10 @@ Filter chain halted as :require_logged_in rendered or redirected
 Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2021-07-30 19:04:14 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.3ms)
+Completed 200 OK in 495ms (Views: 487.6ms | ActiveRecord: 0.0ms)
+
+
