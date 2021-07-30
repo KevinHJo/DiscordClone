@@ -1,4 +1,4 @@
-import { RECEIVE_ERRORS, RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from '../actions/session_actions';
+import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from '../actions/session_actions';
 
 const SessionReducer = (state = {id: null}, action) => {
     Object.freeze(state);
@@ -15,3 +15,5 @@ const SessionReducer = (state = {id: null}, action) => {
             return state;
     }
 }
+
+export default SessionReducer
