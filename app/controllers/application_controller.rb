@@ -21,6 +21,6 @@ class ApplicationController < ActionController::Base
     end
 
     def require_logged_in
-        redirect_to root_url unless logged_in?
+        render json: ['Please Login to continue'] unless logged_in?
     end
 end
