@@ -21,9 +21,9 @@ const receiveErrors = errors => ({
 
 //Thunk Action Creators
 export const login = user => dispatch => (
-    SessionAPIUtil.login(user).then(user => (
+    SessionAPIUtil.login(user).then(user => {
         dispatch(receiveCurrentUser(user))
-    ), err => (
+    }, err => (
         dispatch(receiveErrors(err.responseJSON))
     ))
 );
