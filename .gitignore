@@ -24,3 +24,5 @@ bundle.js
 bundle.js.map
 node_modules/
 bundle.js*
+
+/tmp
