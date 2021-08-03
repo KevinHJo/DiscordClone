@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+    helper_method :logged_in?, :current_user
+
     #CLLLR
     def current_user
         return nil if session[:session_token].nil?
