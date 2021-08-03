@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+    helper_method :logged_in?, :current_user
+
     #CLLLR
     def current_user
         return nil if session[:session_token].nil?
@@ -21,6 +23,6 @@ class ApplicationController < ActionController::Base
     end
 
     def require_logged_in
-        redirect_to root_url unless logged_in?
+        render json: ['Please Login to continue'] unless logged_in?
     end
 end
