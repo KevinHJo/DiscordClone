@@ -1,4 +1,4 @@
-import * as PostAPIUtil from '../util/post_util'
+import * as PostAPIUtil from '../util/post_util';
 
 export const RECEIVE_POST = 'RECEIVE_POST';
 export const RECEIVE_POSTS = 'RECEIVE_POSTS';
@@ -34,14 +34,14 @@ export const createPost = post => dispatch => (
     ))
 );
 
-export const getPosts = () => dispatch => (
-    PostAPIUtil.getPosts().then(posts => {
+export const fetchPosts = () => dispatch => (
+    PostAPIUtil.fetchPosts().then(posts => {
         dispatch(receivePosts(posts))
     })
 );
 
-export const getPost = (postId) => dispatch => (
-    PostAPIUtil.getPost(postId).then(post => {
+export const fetchPost = (postId) => dispatch => (
+    PostAPIUtil.fetchPost(postId).then(post => {
         dispatch(receivePost(post))
     }, err => (
         dispatch(receivePostErrors(err.responseJSON))

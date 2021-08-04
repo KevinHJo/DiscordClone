@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+Post.destroy_all
 
 User.create!([{
     username: 'kevin',
@@ -38,3 +39,27 @@ User.create!([{
     email: 'ethan@email.com',
     password: 'password'
 }]);
+
+Post.create!([{
+    body: 'hello',
+    author_id: 1,
+    channel_id: 1
+},
+{
+    body: 'sup',
+    author_id: 2,
+    channel_id: 1,
+    parent_id: 1
+},
+{
+    body: 'how are you guys',
+    author_id: 3,
+    channel_id: 1
+},
+{
+    body: 'I\'m good!',
+    author_id: 4,
+    channel_id: 1,
+    parent_id: 3
+}
+])
