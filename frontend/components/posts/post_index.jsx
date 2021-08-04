@@ -5,24 +5,31 @@ class PostIndex extends React.Component {
         super(props);
     }
 
+    componentDidMount() {
+        this.props.fetchPosts();
+    }
+
     render() {
-        return (
-            <div className='posts'>
-                <ul>
-                    {
-                        this.props.posts.map(post => {
-                            return (
-                                <label>
+        if (this.props.posts) {
+            return (
+                <div className='posts'>
+                    <ul>
+                        {
+                            this.props.posts.map(post => {
+                                return (
                                     <li key={post.id}>
                                         {post.body}
                                     </li>
-                                </label>
-                            )
-                        })
-                    }
-                </ul>
-            </div>
-        )
+                                )
+                            })
+                        }
+                    </ul>
+                </div>
+            )
+        } else {
+            return null
+        }
+       
     }
 }
 

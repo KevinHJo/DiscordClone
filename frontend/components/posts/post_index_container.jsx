@@ -3,7 +3,7 @@ import { fetchPosts } from '../../actions/post_actions'
 import PostIndex from './post_index'
 
 const mSTP = state => ({
-    posts: state.entities.posts.values
+    posts: Object.values(state.entities.posts)
 })
 
 const mDTP = dispatch => ({
