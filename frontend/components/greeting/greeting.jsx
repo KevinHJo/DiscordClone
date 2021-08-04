@@ -16,7 +16,6 @@ class Greeting extends React.Component {
             return (
                 <nav>
                     <Link to="/login">Login</Link>
-                    <Link to="/signup">Register</Link>
                 </nav>
             )
         }

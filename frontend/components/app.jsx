@@ -6,11 +6,11 @@ import SignupFormContainer from './session_form/signup_form_container'
 import { AuthRoute } from '../util/route_util';
 
 const App = () => (
-    <div>
-        <header>
+    <div className='page'>
+        {/* <header>
             <h1>Discord</h1>
             <GreetingContainer />
-        </header>
+        </header> */}
 
         <AuthRoute exact path='/login' component={LoginFormContainer}/>
         <AuthRoute exact path='/signup' component={SignupFormContainer}/>

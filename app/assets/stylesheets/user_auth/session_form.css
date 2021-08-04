@@ -1,0 +1,50 @@
+.session-form {
+    height: 100%;
+    background-image: url('https://discordapp.com/assets/fd91131ea693096d6be5e8aa99d18f9e.jpg');
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+}
+
+.session-form form {
+    width: 20%;
+    height: 35%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5vw;
+    background-color: rgb(54,57,63);
+    border-radius: 5px;
+}
+
+.form-welcome h2 {
+    font-family: sf-arborcrest-medium;
+    color: white;
+    font-size: 3vh;
+    margin-bottom: 2vh;
+}
+
+.form-welcome h3 {
+    color: rgb(170,171,175);
+    font-size: 1.75vh;
+    margin-bottom: 2vh;
+}
+
+form label {
+    color: rgb(170,171,175)
+}
+
+form input {
+    margin-bottom: 2vh;
+    height: 3vh;
+}
+
+form button {
+    height: 3vh;
+    background-color: rgb(88,101,242);
+}
+
+
+
