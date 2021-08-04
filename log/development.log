@@ -9167,3 +9167,572 @@ Processing by Api::PostsController#index as JSON
 Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for ::1 at 2021-08-04 19:09:29 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 425ms (Views: 422.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 19:10:21 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 19:10:43 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 406ms (Views: 404.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-08-04 19:18:07 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "email"=>"kevin@email.com", "password"=>"[FILTERED]", "birthDate"=>""}}
+  [1m[36mUser Load (19.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kevin@email.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:48
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "kevin"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:48
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "kevin@email.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:48
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "iEsgT0zVpcxnc5mynwQJ0A"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:48
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "iEsgT0zVpcxnc5mynwQJ0A"], ["updated_at", "2021-08-04 23:18:08.086959"], ["id", 1]]
+  ↳ app/models/user.rb:48
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:48
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.1ms)
+Completed 200 OK in 231ms (Views: 6.0ms | ActiveRecord: 31.6ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 19:20:30 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iEsgT0zVpcxnc5mynwQJ0A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 408ms (Views: 405.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-08-04 19:20:31 -0400
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (6.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:1
+  Rendered api/posts/index.json.jbuilder (16.2ms)
+Completed 200 OK in 33ms (Views: 11.7ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 19:24:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iEsgT0zVpcxnc5mynwQJ0A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 768ms (Views: 765.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 19:24:39 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (15.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iEsgT0zVpcxnc5mynwQJ0A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 428ms (Views: 403.7ms | ActiveRecord: 22.2ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-08-04 19:24:40 -0400
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:1
+  Rendered api/posts/index.json.jbuilder (8.0ms)
+Completed 200 OK in 19ms (Views: 10.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 19:25:04 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iEsgT0zVpcxnc5mynwQJ0A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 388ms (Views: 385.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-08-04 19:25:05 -0400
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:1
+  Rendered api/posts/index.json.jbuilder (3.8ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 19:25:17 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iEsgT0zVpcxnc5mynwQJ0A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 388ms (Views: 385.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-08-04 19:25:18 -0400
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:1
+  Rendered api/posts/index.json.jbuilder (1.8ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/posts" for ::1 at 2021-08-04 19:25:28 -0400
+Processing by Api::PostsController#create as JSON
+  Parameters: {"post"=>{"body"=>"lakjdf;alkj", "channel_id"=>"1", "author_id"=>"1", "parent_id"=>"1"}}
+Unpermitted parameter: :parent_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/posts_controller.rb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:9
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("body", "channel_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "lakjdf;alkj"], ["channel_id", 1], ["author_id", 1], ["created_at", "2021-08-04 23:25:28.445366"], ["updated_at", "2021-08-04 23:25:28.445366"]]
+  ↳ app/controllers/api/posts_controller.rb:9
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/posts_controller.rb:9
+  Rendering api/posts/show.json.jbuilder
+  Rendered api/posts/show.json.jbuilder (0.4ms)
+Completed 200 OK in 25ms (Views: 5.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 19:26:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iEsgT0zVpcxnc5mynwQJ0A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 382ms (Views: 379.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-08-04 19:26:06 -0400
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:1
+  Rendered api/posts/index.json.jbuilder (1.9ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/posts" for ::1 at 2021-08-04 19:26:08 -0400
+Processing by Api::PostsController#create as JSON
+  Parameters: {"post"=>{"body"=>"asdfadfadfg", "channel_id"=>"1", "author_id"=>"1", "parent_id"=>"1"}}
+Unpermitted parameter: :parent_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/posts_controller.rb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:9
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("body", "channel_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "asdfadfadfg"], ["channel_id", 1], ["author_id", 1], ["created_at", "2021-08-04 23:26:08.456741"], ["updated_at", "2021-08-04 23:26:08.456741"]]
+  ↳ app/controllers/api/posts_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/posts_controller.rb:9
+  Rendering api/posts/show.json.jbuilder
+  Rendered api/posts/show.json.jbuilder (0.4ms)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/posts" for ::1 at 2021-08-04 19:26:10 -0400
+Processing by Api::PostsController#create as JSON
+  Parameters: {"post"=>{"body"=>"asdfasdga", "channel_id"=>"1", "author_id"=>"1", "parent_id"=>"1"}}
+Unpermitted parameter: :parent_id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/posts_controller.rb:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:9
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("body", "channel_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "asdfasdga"], ["channel_id", 1], ["author_id", 1], ["created_at", "2021-08-04 23:26:10.443203"], ["updated_at", "2021-08-04 23:26:10.443203"]]
+  ↳ app/controllers/api/posts_controller.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/posts_controller.rb:9
+  Rendering api/posts/show.json.jbuilder
+  Rendered api/posts/show.json.jbuilder (0.6ms)
+Completed 200 OK in 13ms (Views: 7.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/posts" for ::1 at 2021-08-04 19:26:12 -0400
+Processing by Api::PostsController#create as JSON
+  Parameters: {"post"=>{"body"=>"dgasdafawegadsg", "channel_id"=>"1", "author_id"=>"1", "parent_id"=>"1"}}
+Unpermitted parameter: :parent_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/posts_controller.rb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:9
+  [1m[36mPost Create (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("body", "channel_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "dgasdafawegadsg"], ["channel_id", 1], ["author_id", 1], ["created_at", "2021-08-04 23:26:12.400423"], ["updated_at", "2021-08-04 23:26:12.400423"]]
+  ↳ app/controllers/api/posts_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/posts_controller.rb:9
+  Rendering api/posts/show.json.jbuilder
+  Rendered api/posts/show.json.jbuilder (0.4ms)
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 19:27:07 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iEsgT0zVpcxnc5mynwQJ0A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 57ms (Views: 50.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-08-04 19:27:07 -0400
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:1
+  Rendered api/posts/index.json.jbuilder (18.7ms)
+Completed 200 OK in 33ms (Views: 20.6ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/api/posts" for ::1 at 2021-08-04 19:27:09 -0400
+Processing by Api::PostsController#create as JSON
+  Parameters: {"post"=>{"body"=>"asdgadf", "channel_id"=>"1", "author_id"=>"1", "parent_id"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/posts_controller.rb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:9
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("body", "channel_id", "author_id", "parent_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["body", "asdgadf"], ["channel_id", 1], ["author_id", 1], ["parent_id", 1], ["created_at", "2021-08-04 23:27:09.188343"], ["updated_at", "2021-08-04 23:27:09.188343"]]
+  ↳ app/controllers/api/posts_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/posts_controller.rb:9
+  Rendering api/posts/show.json.jbuilder
+  Rendered api/posts/show.json.jbuilder (0.5ms)
+Completed 200 OK in 11ms (Views: 5.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 19:27:27 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iEsgT0zVpcxnc5mynwQJ0A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 37ms (Views: 33.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-08-04 19:27:27 -0400
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:1
+  Rendered api/posts/index.json.jbuilder (4.7ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (9.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (8.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (169.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "discord_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (173.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "discord_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (1481.5ms)[0m  [1m[35mCREATE DATABASE "discord_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1094.7ms)[0m  [1m[35mCREATE DATABASE "discord_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "posts" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (14.5ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "body" character varying NOT NULL, "channel_id" integer NOT NULL, "author_id" integer NOT NULL, "parent_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_author_id" ON "posts"  ("author_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_channel_id" ON "posts"  ("channel_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_parent_id" ON "posts"  ("parent_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210804173630)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210730184626),
+(20210804032835);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (4.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-08-04 23:27:51.317876"], ["updated_at", "2021-08-04 23:27:51.317876"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "posts" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "body" character varying NOT NULL, "channel_id" integer NOT NULL, "author_id" integer NOT NULL, "parent_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_author_id" ON "posts"  ("author_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_channel_id" ON "posts"  ("channel_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_parent_id" ON "posts"  ("parent_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210804173630)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210730184626),
+(20210804032835);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (6.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-08-04 23:27:51.422069"], ["updated_at", "2021-08-04 23:27:51.422069"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-08-04 23:27:51.425735"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (9.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (11.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mPost Load (18.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kevin"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kevin@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "BvzIqplq7BHfwVy3unyncQ"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "kevin"], ["email", "kevin@email.com"], ["password_digest", "$2a$12$UlGnVbjbsqWrHoT.ZY1lXuOkSobm9XkUEOtYizocQCZh3oy6PUZ2m"], ["session_token", "BvzIqplq7BHfwVy3unyncQ"], ["created_at", "2021-08-04 23:27:51.731925"], ["updated_at", "2021-08-04 23:27:51.731925"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "rachael"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rachael@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CNPH6jSg839gux6BpLiagw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "rachael"], ["email", "rachael@email.com"], ["password_digest", "$2a$12$eFX3DYHj5AIVz.zTIPHXge99zuSTEQIoDSzIo2X0A/ovf/yZxteVq"], ["session_token", "CNPH6jSg839gux6BpLiagw"], ["created_at", "2021-08-04 23:27:51.917157"], ["updated_at", "2021-08-04 23:27:51.917157"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "anne"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "anne@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "nqB-b9mUf1yGCJgpjRlJyA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "anne"], ["email", "anne@email.com"], ["password_digest", "$2a$12$6J.Py3wrTLVGKIuwbhyMu.sAekHRP8QmsrYDmC.IIV54jTTveErlq"], ["session_token", "nqB-b9mUf1yGCJgpjRlJyA"], ["created_at", "2021-08-04 23:27:52.095112"], ["updated_at", "2021-08-04 23:27:52.095112"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jacob"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jacob@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iE7ShKYyizvUPUWY8RnHxg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "jacob"], ["email", "jacob@email.com"], ["password_digest", "$2a$12$ThLhX21BK3vMqpU/s1mUSerIrN1acy/.oy8W1kkm.rZfP6otAuWB."], ["session_token", "iE7ShKYyizvUPUWY8RnHxg"], ["created_at", "2021-08-04 23:27:52.273068"], ["updated_at", "2021-08-04 23:27:52.273068"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "dante"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dante@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "gaTCZJ3hRGzxvrZjADbh6Q"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "dante"], ["email", "dante@email.com"], ["password_digest", "$2a$12$N5Gknn5FLq5I8mGgpikHUO5rq42CaPWAb6kTwP7/.oojGbR3jcWhO"], ["session_token", "gaTCZJ3hRGzxvrZjADbh6Q"], ["created_at", "2021-08-04 23:27:52.449178"], ["updated_at", "2021-08-04 23:27:52.449178"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ethan"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ethan@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "J5v1vqSBajeSsTL24uQu3A"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "ethan"], ["email", "ethan@email.com"], ["password_digest", "$2a$12$6224KRuOVMR7TXRk5IaeBOd.KitVsu2uSsh.x3JtUJsE8sYFGsh0O"], ["session_token", "J5v1vqSBajeSsTL24uQu3A"], ["created_at", "2021-08-04 23:27:52.627132"], ["updated_at", "2021-08-04 23:27:52.627132"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("body", "channel_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "hello"], ["channel_id", 1], ["author_id", 1], ["created_at", "2021-08-04 23:27:52.643168"], ["updated_at", "2021-08-04 23:27:52.643168"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("body", "channel_id", "author_id", "parent_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["body", "sup"], ["channel_id", 1], ["author_id", 2], ["parent_id", 1], ["created_at", "2021-08-04 23:27:52.646844"], ["updated_at", "2021-08-04 23:27:52.646844"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mPost Create (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("body", "channel_id", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "how are you guys"], ["channel_id", 1], ["author_id", 3], ["created_at", "2021-08-04 23:27:52.649414"], ["updated_at", "2021-08-04 23:27:52.649414"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mPost Create (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("body", "channel_id", "author_id", "parent_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["body", "I'm good!"], ["channel_id", 1], ["author_id", 4], ["parent_id", 3], ["created_at", "2021-08-04 23:27:52.652498"], ["updated_at", "2021-08-04 23:27:52.652498"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+Started GET "/" for ::1 at 2021-08-04 19:28:10 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/kevin/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (14.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iEsgT0zVpcxnc5mynwQJ0A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 1686ms (Views: 1666.5ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 19:28:21 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iEsgT0zVpcxnc5mynwQJ0A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 36ms (Views: 30.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/session" for ::1 at 2021-08-04 19:28:31 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "email"=>"kevin;jadf", "password"=>"[FILTERED]", "birthDate"=>""}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kevin;jadf"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+Completed 404 Not Found in 2ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/session" for ::1 at 2021-08-04 19:28:36 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "email"=>"kevin@email.com", "password"=>"[FILTERED]", "birthDate"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kevin@email.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:48
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "kevin"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:48
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "kevin@email.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:48
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "eNUyhNAZXLQ9zWsXloItYA"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:48
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "eNUyhNAZXLQ9zWsXloItYA"], ["updated_at", "2021-08-04 23:28:36.803708"], ["id", 1]]
+  ↳ app/models/user.rb:48
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:48
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 200ms (Views: 6.5ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/" for ::1 at 2021-08-04 19:28:41 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "eNUyhNAZXLQ9zWsXloItYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-08-04 19:28:41 -0400
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (19.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:1
+  Rendered api/posts/index.json.jbuilder (28.8ms)
+Completed 200 OK in 41ms (Views: 11.7ms | ActiveRecord: 22.8ms)
+
+

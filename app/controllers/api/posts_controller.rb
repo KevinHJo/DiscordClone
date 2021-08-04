@@ -15,6 +15,6 @@ class Api::PostsController < ApplicationController
 
     private
     def post_params
-        params.require(:post).permit(:body, :channel_id, :author_id)
+        params.require(:post).permit(:body, :channel_id, :author_id, :parent_id)
     end
 end

@@ -1,4 +1,5 @@
 import React from 'react';
+import PostForm from './post_form';
 
 class PostIndex extends React.Component {
     constructor(props) {
@@ -9,10 +10,9 @@ class PostIndex extends React.Component {
         this.props.fetchPosts();
     }
 
-    render() {
-        if (this.props.posts) {
+    renderPostList() {
+       if (this.props.posts) {
             return (
-                <div className='posts'>
                     <ul>
                         {
                             this.props.posts.map(post => {
@@ -24,12 +24,19 @@ class PostIndex extends React.Component {
                             })
                         }
                     </ul>
-                </div>
             )
         } else {
             return null
-        }
-       
+        } 
+    }
+
+    render() {
+        return (
+            <div className='posts'>
+                {this.renderPostList()}
+                <PostForm currentUser={this.props.currentUser} createPost={this.props.createPost}/>
+            </div>
+        )
     }
 }
 
