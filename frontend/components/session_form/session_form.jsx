@@ -6,7 +6,8 @@ class SessionForm extends React.Component {
         this.state = {
             username: '',
             email: '',
-            password: ''
+            password: '',
+            birthDate: '',
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,12 +28,15 @@ class SessionForm extends React.Component {
     includeUsername() {
         if (this.props.formType === 'Signup') {
             return (
-                <label>USERNAME
+                <div className='input'>
+                    <label for="username">USERNAME</label>
                     <input type="text"
                         value={this.state.username}
                         onChange={this.update('username')}
+                        spellCheck={false}
+                        id="username"
                     />
-                </label>
+                </div>
             )
         }
     }
@@ -75,33 +79,36 @@ class SessionForm extends React.Component {
         const {formType} = this.props;
         return (
             <div className='session-form'>
-                
-
                 <form onSubmit={this.handleSubmit}>
                     {this.renderWelcomeMessage()}
                     {this.renderErrors()}
-                    <label for='email'>EMAIL</label>
-                    <input type="text"
-                        value={this.state.email}
-                        onChange={this.update('email')}
-                        id='email'
-                    />
-                    
+                    <div className='input-fields'>
+                        <div className="input">
+                            <label for='email'>EMAIL</label>
+                            <input type="text"
+                                value={this.state.email}
+                                onChange={this.update('email')}
+                                spellCheck={false}
+                                id='email'
+                            />
+                        </div>
 
-                    {this.includeUsername()}
+                        {this.includeUsername()}
 
-                    <label for='password'>PASSWORD</label>
-                    <input type="password"
-                        value={this.state.password}
-                        onChange={this.update('password')}
-                        id='password'
-                    />
-                    
+                        <div className='input'>
+                            <label for='password'>PASSWORD</label>
+                            <input type="password"
+                                value={this.state.password}
+                                onChange={this.update('password')}
+                                id='password'
+                            />
+                        </div>
 
-                    <button type="submit">Login</button>
-                    {this.props.navLink}
+                        <button type="submit">{formType}</button>
+                        {this.props.navLink}
+                    </div>
                 </form>
-
+                    
                 
             </div>
         )

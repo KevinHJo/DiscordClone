@@ -10,7 +10,6 @@
 
 .session-form form {
     width: 20%;
-    height: 35%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -20,50 +19,73 @@
     box-shadow: 0vh 0vh 0.5vh black;
 }
 
+.form-welcome {
+    margin-bottom: 1vh;
+}
+
 .form-welcome h2 {
     font-family: sf-arborcrest-heavy;
     color: white;
     font-size: 3vh;
-    margin-bottom: 2vh;
-}
-
-.form-welcome h3 {
-    color: rgb(170,171,175);
-    font-size: 1.75vh;
-    margin-bottom: 2vh;
-}
-
-form label {
-    font-family: filetto-regular;
-    font-size: 1.5vh;
-    color: rgb(170,171,175);
     margin-bottom: 1.5vh;
 }
 
-form input {
+.form-welcome h3 {
+    font-family: sf-arborcrest-heavy;
+    color: rgb(170,171,175);
+    font-size: 1.75vh;
+    margin-bottom: 1.5vh;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+.input label {
+    font-family: filetto-bold;
+    letter-spacing: 0.075em;
+    font-size: 1.5vh;
+    color: rgb(170,171,175);
+    margin-bottom: 1vh;
+}
+
+.input input {
     margin-bottom: 2vh;
-    height: 3.5vh;
+    height: 1.75vh;
+    font-size: 1.75vh;
     font-family: filetto-regular;
-    font-size: 100%;
     outline: none;
     border: 0.05vh solid black;
     border-radius: 0.5vh;
-    -webkit-appearance: none; 
-    -moz-appearance: none; 
+    padding: 1.5vh;
+    letter-spacing: 0.075em;
 }
 
-form input:focus {
+.input input:focus {
     border: 0.05vh solid rgb(3,167,232);
 }
 
 form button {
-    font-size: 1.5vh;
+    margin-top: 2vh;
+    font-family: filetto-regular;
+    font-size: 1.8vh;
     color: white;
-    height: 4.5vh;
+    height: 5vh;
     background-color: rgb(88,101,242);
     margin-bottom: 1.5vh;
     border:0vh;
     border-radius: 0.5vh;
+    transition: all 3 ease;
+}
+
+form button:hover {
+    background-color: rgb(71,82,196);
 }
 
 .nav {
