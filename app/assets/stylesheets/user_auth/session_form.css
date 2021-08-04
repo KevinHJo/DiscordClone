@@ -16,11 +16,12 @@
     flex-direction: column;
     padding: 1.5vw;
     background-color: rgb(54,57,63);
-    border-radius: 5px;
+    border-radius: 0.5vh;
+    box-shadow: 0vh 0vh 0.5vh black;
 }
 
 .form-welcome h2 {
-    font-family: sf-arborcrest-medium;
+    font-family: sf-arborcrest-heavy;
     color: white;
     font-size: 3vh;
     margin-bottom: 2vh;
@@ -33,18 +34,49 @@
 }
 
 form label {
-    color: rgb(170,171,175)
+    font-family: filetto-regular;
+    font-size: 1.5vh;
+    color: rgb(170,171,175);
+    margin-bottom: 1.5vh;
 }
 
 form input {
     margin-bottom: 2vh;
-    height: 3vh;
+    height: 3.5vh;
+    font-family: filetto-regular;
+    font-size: 100%;
+    outline: none;
+    border: 0.05vh solid black;
+    border-radius: 0.5vh;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+}
+
+form input:focus {
+    border: 0.05vh solid rgb(3,167,232);
 }
 
 form button {
-    height: 3vh;
+    font-size: 1.5vh;
+    color: white;
+    height: 4.5vh;
     background-color: rgb(88,101,242);
+    margin-bottom: 1.5vh;
+    border:0vh;
+    border-radius: 0.5vh;
 }
+
+.nav {
+    font-size: 1.5vh;
+    color: rgb(106,110,117);
+}
+
+.nav a {
+    text-decoration: none;
+    color: rgb(3,167,232);
+}
+
+
 
 
 
