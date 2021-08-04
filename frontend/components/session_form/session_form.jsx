@@ -29,7 +29,7 @@ class SessionForm extends React.Component {
         if (this.props.formType === 'Signup') {
             return (
                 <div className='input'>
-                    <label for="username">USERNAME</label>
+                    <label htmlFor="username">USERNAME</label>
                     <input type="text"
                         value={this.state.username}
                         onChange={this.update('username')}
@@ -67,7 +67,7 @@ class SessionForm extends React.Component {
             case 'Signup':
                 return (
                     <div className='form-welcome'>
-                        <h2>Create an account</h2>
+                        <h2 className='signup-header'>Create an account</h2>
                     </div>
                 )
             default:
@@ -84,7 +84,7 @@ class SessionForm extends React.Component {
                     {this.renderErrors()}
                     <div className='input-fields'>
                         <div className="input">
-                            <label for='email'>EMAIL</label>
+                            <label htmlFor='email'>EMAIL</label>
                             <input type="text"
                                 value={this.state.email}
                                 onChange={this.update('email')}
@@ -96,7 +96,7 @@ class SessionForm extends React.Component {
                         {this.includeUsername()}
 
                         <div className='input'>
-                            <label for='password'>PASSWORD</label>
+                            <label htmlFor='password'>PASSWORD</label>
                             <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
