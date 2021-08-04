@@ -9,12 +9,12 @@ class Api::PostsController < ApplicationController
         if @post.save
             render 'api/posts/show'
         else
-            render json: ['Message cannot be empty'], status: 422
+            render json: ['Invalid post'], status: 422
         end
     end
 
     private
     def post_params
-        params.require(:post).permit(:body)
+        params.require(:post).permit(:body, :channel_id, :author_id)
     end
 end
