@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const mSTP = state => ({
     errors: state.errors.session,
     formType: 'Login',
-    navLink: <Link to='/signup'>Register</Link>
+    navLink: <div className='nav'>Need an account? <Link to='/signup'>Register</Link></div>
 });
 
 const mDTP = dispatch => ({

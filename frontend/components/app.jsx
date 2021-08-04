@@ -6,7 +6,7 @@ import SignupFormContainer from './session_form/signup_form_container'
 import { AuthRoute } from '../util/route_util';
 
 const App = () => (
-    <div>
+    <div className='page'>
         <header>
             <h1>Discord</h1>
             <GreetingContainer />

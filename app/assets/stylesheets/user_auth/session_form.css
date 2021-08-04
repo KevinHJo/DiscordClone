@@ -1,0 +1,125 @@
+.session-form {
+    height: 100%;
+    background-image: url('https://discordapp.com/assets/fd91131ea693096d6be5e8aa99d18f9e.jpg');
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+}
+
+.session-form form {
+    width: 20%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5vw;
+    background-color: rgb(54,57,63);
+    border-radius: 0.5vh;
+    box-shadow: 0vh 0vh 0.5vh black;
+}
+
+.form-welcome {
+    margin-bottom: 1.5vh;
+}
+
+.form-welcome h2 {
+    font-family: sf-arborcrest-heavy;
+    color: white;
+    font-size: 2.5vh;
+    margin-bottom: 1.5vh;
+}
+
+.form-welcome h3 {
+    font-family: sf-arborcrest-heavy;
+    color: rgb(170,171,175);
+    font-size: 1.5vh;
+}
+
+.session-form-errors {
+    margin-bottom: 1vh;
+    font-family: sf-arborcrest-light;
+    font-size: 1.5vh;
+    font-style:italic;
+    color: red;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-header {
+    text-align: center;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+.input label {
+    font-family: sf-arborcrest-medium;
+    letter-spacing: 0.05em;
+    font-size: 1.25vh;
+    color: rgb(170,171,175);
+    margin-bottom: 0.75vh;
+}
+
+.input input {
+    margin-bottom: 2vh;
+    height: 1vh;
+    font-size: 1.5vh;
+    font-family: filetto-regular;
+    outline: none;
+    border: 0.05vh solid black;
+    border-radius: 0.3vh;
+    padding: 1.25vh 1vh 1.25vh 1vh;
+    letter-spacing: 0.075em;
+}
+
+.input input:focus {
+    border: 0.05vh solid rgb(3,167,232);
+}
+
+form button {
+    margin-top: 2vh;
+    font-family: filetto-regular;
+    font-size: 1.8vh;
+    color: white;
+    height: 4vh;
+    background-color: rgb(88,101,242);
+    margin-bottom: 1.5vh;
+    border:0vh;
+    border-radius: 0.3vh;
+    transition: all 3 ease;
+}
+
+form button:hover {
+    background-color: rgb(71,82,196);
+}
+
+form button:active {
+    background-color: rgb(60,69,165);
+}
+
+.nav {
+    font-size: 1.3vh;
+    color: rgb(106,110,117);
+}
+
+.nav a {
+    text-decoration: none;
+    font-family: filetto-regular;
+    font-size: 1.3vh;
+    letter-spacing: 0.05em;
+    color: rgb(3,167,232);
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+
+
+
