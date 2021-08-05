@@ -1,8 +1,8 @@
 class Api::PostsController < ApplicationController
-    def index
-        @posts = Post.all
-        render 'api/posts/index'
-    end
+    # def index
+    #     @posts = Post.all
+    #     render 'api/posts/index'
+    # end
     
 #     def create
 #         @post = Post.new(post_params)
@@ -13,8 +13,8 @@ class Api::PostsController < ApplicationController
 #         end
 #     end
 
-    private
-    def post_params
-        params.require(:post).permit(:body, :channel_id, :author_id, :parent_id)
-    end
+    # private
+    # def post_params
+    #     params.require(:post).permit(:body, :channel_id, :author_id, :parent_id)
+    # end
 end

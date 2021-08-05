@@ -79,7 +79,8 @@
 }
 
 .input input:focus {
-    border: 0.05vh solid rgb(3,167,232);
+    border: 0.2vh solid rgb(3,167,232);
+    padding: 1.15vh 0.9vh 1.15vh 0.9vh;
 }
 
 form button {
