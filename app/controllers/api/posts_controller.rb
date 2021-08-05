@@ -4,14 +4,14 @@ class Api::PostsController < ApplicationController
         render 'api/posts/index'
     end
     
-    def create
-        @post = Post.new(post_params)
-        if @post.save
-            render 'api/posts/show'
-        else
-            render json: ['Invalid post'], status: 422
-        end
-    end
+#     def create
+#         @post = Post.new(post_params)
+#         if @post.save
+#             render 'api/posts/show'
+#         else
+#             render json: ['Invalid post'], status: 422
+#         end
+#     end
 
     private
     def post_params
