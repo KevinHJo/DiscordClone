@@ -47,18 +47,15 @@ class PostIndex extends React.Component {
     }
 
     renderPostList() {
-        if (this.props.posts) {
+        if (this.props.posts[0]) {
             return (
                     <ul className='post-history'>
                         {
                             this.props.posts.map(post => {
                                 return (
-                                    <li key={post.id} className='post-item'>
-                                        <div className='post-info'>
-                                            <span className='post-author'>{this.props.users[post.author_id].username}</span>
-                                            <span className='post-date'>{post.created_at}</span>
-                                        </div>
+                                    <li key={post.id}>
                                         <PostIndexItem post={post} users={this.props.users}/>
+                                        
                                     </li>
                                 )
                             }, this) // 'this' ensures context for 'this.props.users'
@@ -68,7 +65,12 @@ class PostIndex extends React.Component {
                     
             )
         } else {
-            return null
+            return (
+                <li>
+                    <p>Loading Posts</p>
+                    <div ref={this.bottom}/>
+                </li>
+            )
         } 
     }
 
@@ -76,6 +78,7 @@ class PostIndex extends React.Component {
         return (
             <div className='posts'>
                 {this.renderPostList()}
+                
                 <PostForm currentUser={this.props.currentUser}/>
             </div>
         )

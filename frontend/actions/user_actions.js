@@ -6,7 +6,6 @@ export const receiveUsers = users => ({
 });
 
 // export const fetchUsers = () => dispatch => {
-//     debugger
 //     console.dir(SessionAPIUtil.fetchUsers())
 //     return SessionAPIUtil.fetchUsers().then(users => {
 //         dispatch(receiveUsers(users))

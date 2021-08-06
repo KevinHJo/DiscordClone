@@ -2,16 +2,17 @@
 // // They will automatically be included in application.css.
 // // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// .posts {
-//     padding-top: 10px;
-//     padding-left: 20px;
-//     background-color: rgb(54,57,63);
-//     color: rgb(220,221,222);
-// }
+.posts {
+    padding-top: 10px;
+    padding-left: 20px;
+    background-color: rgb(54,57,63);
+    color: rgb(220,221,222);
+}
 
-// .post-history {
-//     max-height: 50vh;
-// }
+.post-history {
+    overflow-y: scroll;
+    max-height: 100vh;
+}
 
 // .post-item {
 //     display: flex;

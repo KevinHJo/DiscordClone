@@ -36,6 +36,11 @@ class PostIndexItem extends React.Component {
         if (this.state.editing) {
             return (
                 <div className='post-item-edit'>
+                    <div className='post-info'>
+                        <span className='post-author'>{this.props.users[post.author_id].username}</span>
+                        <span className='post-date'>{post.created_at}</span>
+                    </div>
+
                     <form onSubmit={this.handleSubmit}>
                         <input type="text" value={this.state.body} onChange={this.updatePost}/>
                         <input type='submit'/>
@@ -44,8 +49,15 @@ class PostIndexItem extends React.Component {
             )
         } else {
             return (    
-                <div className='post-item-body'>
-                    <div>{post.body}</div>
+                <div className='post-item'>
+                    <div className='post-content'>
+                        <div className='post-info'>
+                            <span className='post-author'>{this.props.users[post.author_id].username}</span>
+                            <span className='post-date'>{post.created_at}</span>
+                        </div>
+                        <span className='post-body'>{post.body}</span>
+                    </div>
+
                     <div className='post-settings'>
                         <i className="fas fa-ellipsis-h"></i>
                         <ul className='post-settings-dropdown'>
