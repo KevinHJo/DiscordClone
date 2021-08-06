@@ -41,25 +41,28 @@ User.create!([{
 }]);
 
 Post.create!([{
-    body: 'hello',
+    body: '	Strangers from distant lands, friends of old. You have been summoned here to answer the threat of Mordor.',
     author_id: 1,
     channel_id: 1
 },
 {
-    body: 'sup',
-    author_id: 2,
-    channel_id: 1,
-    parent_id: 1
-},
-{
-    body: 'how are you guys',
-    author_id: 3,
+    body: 'Middle Earth stands upon the brink of destruction.',
+    author_id: 1,
     channel_id: 1
 },
 {
-    body: 'I\'m good!',
-    author_id: 4,
+    body: 'None can escape it. You will unite or you will fall.',
+    author_id: 1,
     channel_id: 1,
-    parent_id: 3
+},
+{
+    body: 'Each race is bound to this fate, this one doom.',
+    author_id: 1,
+    channel_id: 1
+},
+{
+    body: 'Bring forth the Ring, Frodo',
+    author_id: 1,
+    channel_id: 1,
 }
 ])

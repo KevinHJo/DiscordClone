@@ -26,6 +26,9 @@ class PostIndex extends React.Component {
                         case 'posts':
                             this.props.receivePosts(data.posts);
                             break;
+                        case 'removedPost':
+                            this.props.removePost(data.postId);
+                            break;
                     }
                 },
                 speak: function(data) {
@@ -53,12 +56,13 @@ class PostIndex extends React.Component {
                                 return (
                                     <li key={post.id}>
                                         <PostIndexItem post={post}/>
-                                        <div ref={this.bottom}/>
                                     </li>
                                 )
                             })
                         }
+                        <div ref={this.bottom}/>
                     </ul>
+                    
             )
         } else {
             return null

@@ -28,6 +28,7 @@ class PostIndexItem extends React.Component {
 
     deletePost(e) {
         e.preventDefault();
+        App.cable.subscriptions.subscriptions[0].delete({id: this.state.id});
     }
 
     render() {
