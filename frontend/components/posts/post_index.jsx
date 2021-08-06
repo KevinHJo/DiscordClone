@@ -6,7 +6,6 @@ class PostIndex extends React.Component {
     constructor(props) {
         super(props);
         this.bottom = React.createRef();
-        // this.loadPosts = this.loadPosts.bind(this);
     }
 
     componentDidUpdate() {
@@ -14,7 +13,6 @@ class PostIndex extends React.Component {
     }
 
     componentDidMount() {
-        console.dir(App.cable.subscriptions);
         App.cable.subscriptions.create(
             {channel: "ChatChannel"},
             {
@@ -24,6 +22,7 @@ class PostIndex extends React.Component {
                             this.props.receivePost(data.post);
                             break;
                         case 'posts':
+                            this.props.receiveUsers(data.users)
                             this.props.receivePosts(data.posts);
                             break;
                         case 'removedPost':
@@ -48,17 +47,21 @@ class PostIndex extends React.Component {
     }
 
     renderPostList() {
-       if (this.props.posts) {
+        if (this.props.posts) {
             return (
                     <ul className='post-history'>
                         {
                             this.props.posts.map(post => {
                                 return (
-                                    <li key={post.id}>
-                                        <PostIndexItem post={post}/>
+                                    <li key={post.id} className='post-item'>
+                                        <div className='post-info'>
+                                            <span className='post-author'>{this.props.users[post.author_id].username}</span>
+                                            <span className='post-date'>{post.created_at}</span>
+                                        </div>
+                                        <PostIndexItem post={post} users={this.props.users}/>
                                     </li>
                                 )
-                            })
+                            }, this) // 'this' ensures context for 'this.props.users'
                         }
                         <div ref={this.bottom}/>
                     </ul>

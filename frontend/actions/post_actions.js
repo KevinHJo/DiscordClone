@@ -30,26 +30,3 @@ const receivePostErrors = errors => ({
 export const removePostErrors = () => ({
     type: REMOVE_POST_ERRORS
 });
-
-//THUNK ACTION CREATORS
-export const createPost = post => dispatch => (
-    PostAPIUtil.createPost(post).then(post => {
-        dispatch(receivePost(post))
-    }, err => (
-        dispatch(receivePostErrors(err.responseJSON))
-    ))
-);
-
-export const fetchPosts = () => dispatch => (
-    PostAPIUtil.fetchPosts().then(posts => {
-        dispatch(receivePosts(posts))
-    })
-);
-
-export const fetchPost = (postId) => dispatch => (
-    PostAPIUtil.fetchPost(postId).then(post => {
-        dispatch(receivePost(post))
-    }, err => (
-        dispatch(receivePostErrors(err.responseJSON))
-    ))
-);

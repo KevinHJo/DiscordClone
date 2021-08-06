@@ -44,7 +44,7 @@ class PostIndexItem extends React.Component {
             )
         } else {
             return (    
-                <div className='post-item'>
+                <div className='post-item-body'>
                     <div>{post.body}</div>
                     <div className='post-settings'>
                         <i className="fas fa-ellipsis-h"></i>

@@ -13,7 +13,8 @@ class ChatChannel < ApplicationCable::Channel
 
   def load
     posts = Post.all
-    socket = { posts: posts, type: 'posts' }
+    users = User.all
+    socket = { posts: posts, type: 'posts', users: users }
     ChatChannel.broadcast_to('chat_channel', socket)
   end
 

@@ -22,4 +22,8 @@ class Post < ApplicationRecord
         class_name: :Post,
         primary_key: :id,
         foreign_key: :parent_id
+
+    def created_at
+        attributes['created_at'].strftime("%m/%d/%Y")
+    end
 end

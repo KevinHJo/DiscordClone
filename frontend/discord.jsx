@@ -5,7 +5,6 @@ import Root from './components/root';
 
 //TESTING
 import { login, logout, signup } from './actions/session_actions';
-import { fetchPost, fetchPosts, createPost } from './actions/post_actions';
 //END_OF_TESTING
 
 //USER-AUTH
@@ -31,9 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.logout = logout;
     window.getState = store.getState;
     window.dispatch = store.dispatch;
-    window.fetchPost = fetchPost;
-    window.fetchPosts = fetchPosts;
-    window.createPost = createPost;
     //END_OF_TESTING
     
     const root = document.getElementById('root');
