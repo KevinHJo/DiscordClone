@@ -1,0 +1,23 @@
+.session-animation-parent {
+    height: 100%;
+}
+
+.slide-enter, .slide-exit {
+    transition: transform 300ms ease-out;
+}
+
+.slide-enter {
+    transform: translateY(100%);
+}
+
+.slide-enter.slide-enter-active {
+    transform: translateX(0%);
+}
+
+.slide-exit-active {
+    transform: translateY(-100%);
+}
+
+.slide-appear-active {
+    transform: translateY(0);
+}

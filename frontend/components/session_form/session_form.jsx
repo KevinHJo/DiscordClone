@@ -1,4 +1,5 @@
 import React from 'react';
+import {} from '../../actions/session_actions'
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -14,6 +15,10 @@ class SessionForm extends React.Component {
         this.includeUsername = this.includeUsername.bind(this);
         this.renderWelcomeMessage = this.renderWelcomeMessage.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
+    }
+
+    componentDidMount() {
+        this.props.removeSessionErrors();
     }
 
     handleSubmit(e) {
@@ -108,8 +113,6 @@ class SessionForm extends React.Component {
                         {this.props.navLink}
                     </div>
                 </form>
-                    
-                
             </div>
         )
     }

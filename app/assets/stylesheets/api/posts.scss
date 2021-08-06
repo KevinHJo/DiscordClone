@@ -1,3 +1,80 @@
-// Place all the styles related to the api::posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// // Place all the styles related to the api::posts controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// .posts {
+//     padding-top: 10px;
+//     padding-left: 20px;
+//     background-color: rgb(54,57,63);
+//     color: rgb(220,221,222);
+// }
+
+// .post-history {
+//     max-height: 50vh;
+// }
+
+// .post-item {
+//     display: flex;
+//     justify-content: space-between;
+//     padding: 1vh;
+//     position: relative;
+// }
+
+// .post-item:hover {
+//     background-color: rgb(44, 46, 51)
+// }
+
+// .post-item > .post-settings {
+//     display: none;
+// }
+
+// .post-item:hover .post-settings {
+//     display: block;
+// }
+
+// .post-settings i {
+//     cursor: pointer;
+//     position: absolute;
+//     right: 3vh;
+//     bottom: 2vh;
+//     padding: .75vh;
+//     background-color: rgb(54,57,63);
+//     box-shadow: 0vh 0vh 0.1vh black;
+//     border-radius: 0.5vh;
+// }
+
+// .post-settings i:hover {
+//     background-color: rgb(62,66,72);
+// }
+
+// .post-item > div.post-settings > ul.post-settings-dropdown {
+//     display: none;
+//     position: absolute;
+//     right: -100vh;
+// }
+
+// .post-item > div.post-settings:hover > ul.post-settings-dropdown {
+//     display: block;
+//     right: 3vh;
+//     background-color: rgb(24,25,28);
+//     border-radius: 0.5vh;
+//     padding: 0.5vh;
+// }
+
+// // .post-item > div.post-settings > ul.post-settings-dropdown:hover {
+// //     display: block;
+// // }
+
+// .post-settings ul li {
+//     padding: 1vh;
+//     border-radius: 0.5vh;
+// }
+
+// .post-settings ul li:hover {
+//     background-color: rgb(66, 74, 167);
+//     cursor: pointer;
+// }
+
+// .post-settings ul li:active {
+//     background-color: rgb(60,69,165);
+// }
