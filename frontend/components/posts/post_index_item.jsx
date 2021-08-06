@@ -22,7 +22,7 @@ class PostIndexItem extends React.Component {
     
     handleSubmit(e) {
         e.preventDefault();
-        App.cable.subscriptions.subscriptions[0].update({post: this.state});
+        App.cable.subscriptions.subscriptions[0].update(this.state);
         this.setState({editing: false});
     }
 
@@ -37,6 +37,7 @@ class PostIndexItem extends React.Component {
                 <div className='post-item-edit'>
                     <form onSubmit={this.handleSubmit}>
                         <input type="text" value={this.state.body} onChange={this.updatePost}/>
+                        <input type='submit'/>
                     </form>
                 </div>
             )

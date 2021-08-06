@@ -19,7 +19,7 @@ class ChatChannel < ApplicationCable::Channel
 
   def update(data)
     post = Post.find(data['id'])
-    post.update(data['body'])
+    post.update(body: data['body'])
     socket = { post: post, type: 'post' }
     ChatChannel.broadcast_to('chat_channel', socket)
   end
