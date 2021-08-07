@@ -27,8 +27,8 @@ class PostForm extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <input type="text" value={this.state.body} onChange={this.update}/>
+            <form onSubmit={this.handleSubmit} className='post-form'>
+                <input type="text" value={this.state.body} placeholder={'Enter your message here'} onChange={this.update}/>
                 <input type="submit" />
             </form>
         )

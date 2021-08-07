@@ -53,16 +53,12 @@ class PostIndex extends React.Component {
                         {
                             this.props.posts.map(post => {
                                 return (
-                                    <li key={post.id}>
-                                        <PostIndexItem post={post} users={this.props.users}/>
-                                        
-                                    </li>
+                                    <PostIndexItem post={post} users={this.props.users}/>
                                 )
                             }, this) // 'this' ensures context for 'this.props.users'
                         }
                         <div ref={this.bottom}/>
                     </ul>
-                    
             )
         } else {
             return (
