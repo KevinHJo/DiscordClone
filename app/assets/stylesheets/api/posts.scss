@@ -3,79 +3,212 @@
 // // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .posts {
-    padding-top: 10px;
-    padding-left: 20px;
     background-color: rgb(54,57,63);
     color: rgb(220,221,222);
+    height: 95vh;
 }
 
 .post-history {
     overflow-y: scroll;
-    max-height: 75vh;
+    max-height: 90vh;
 }
 
 .post-item {
     display: flex;
-    justify-content: space-between;
-    padding: 1vh;
-    position: relative;
+    justify-content:space-between;
+    padding: 1vh 1vh 1vh 0.75vh;
+    position:relative;
 }
 
 .post-item:hover {
     background-color: rgb(44, 46, 51)
 }
 
-.post-item > .post-settings {
+.post-content {
+    display: flex;
+}
+
+.post-profile-pic img {
+    height: 3vh;
+    padding-right: 1vh;
+}
+
+.post-info {
+    display: flex;
+    flex-direction:column;
+}
+
+.post-author {
+    padding-right: 0.75vh;
+    font-family: sf-arborcrest-heavy;
+    font-size: 1.5vh;
+}
+
+.post-date {
+    font-family: sf-arborcrest-medium;
+    font-size: 1vh;
+    color: rgb(102,118,125);
+}
+
+.post-body {
+    padding-top: 0.75vh;
+    font-size: 1.25vh;
+}
+
+.post-item i {
     display: none;
-}
-
-.post-item:hover .post-settings {
-    display: block;
-}
-
-.post-settings i {
-    cursor: pointer;
     position: absolute;
-    right: 3vh;
-    bottom: 2vh;
+    right: 5vh;
+    cursor: pointer;
+    top: -1vh;
     padding: .75vh;
     background-color: rgb(54,57,63);
     box-shadow: 0vh 0vh 0.1vh black;
     border-radius: 0.5vh;
 }
 
-.post-settings i:hover {
+.post-item:hover i {
+    display: block;
+}
+
+.post-item i:hover {
     background-color: rgb(62,66,72);
 }
 
-.post-item > div.post-settings > ul.post-settings-dropdown {
+.post-settings .post-settings-dropdown {
     display: none;
-    position: absolute;
-    right: -100vh;
 }
 
-.post-item > div.post-settings:hover > ul.post-settings-dropdown {
+.active-post-settings i {
     display: block;
-    right: 3vh;
+    background-color: rgb(62,66,72);
+}
+
+.active-post-settings .post-settings-dropdown {
+    display: block;
+    position: absolute;
+    right: 9vh;
+    bottom: -0.75vh;
     background-color: rgb(24,25,28);
     border-radius: 0.5vh;
     padding: 0.5vh;
 }
 
-// .post-item > div.post-settings > ul.post-settings-dropdown:hover {
-//     display: block;
-// }
-
-.post-settings ul li {
+.post-settings-dropdown > li {
     padding: 1vh;
     border-radius: 0.5vh;
 }
 
-.post-settings ul li:hover {
+.post-settings-dropdown > li:hover {
     background-color: rgb(66, 74, 167);
     cursor: pointer;
 }
 
-.post-settings ul li:active {
-    background-color: rgb(60,69,165);
+.post-form {
+    background-color: transparent;
 }
+
+.post-form input[type='text'] {
+    background-color: rgb(64,68,75);
+    padding: 0.75vh 2vh 0.75vh 2vh;
+    width: 95vw;
+    height: 1.75vh;
+    margin-left: 2.5vh;
+    margin-bottom: 1vh;
+    caret-color: white;
+    font-size: 1.25vh;
+    font-family: filetto-regular;
+    color: white;
+    border: 0vh;
+    outline: none;
+    border-radius: 0.7vh;
+    letter-spacing: 0.075em;
+}
+
+.post-form input[type='submit'] {
+    display: none;
+}
+
+.post-item-edit {
+    background-color: rgb(44, 46, 51);
+}
+
+.post-item-edit .post-content {
+    padding: 1vh 0vh 1.25vh 0.75vh;
+}
+
+.post-item-edit i {
+    display: none;
+    position: absolute;
+    right: 5vh;
+    cursor: pointer;
+    top: -1vh;
+    padding: .75vh;
+    background-color: rgb(54,57,63);
+    box-shadow: 0vh 0vh 0.1vh black;
+    border-radius: 0.5vh;
+}
+
+.post-edit-form input[type='text'] {
+    background-color: rgb(64,68,75);
+    padding: 0.75vh 2vh 0.75vh 1vh;
+    width: 85vw;
+    height: 1.75vh;
+    margin-top: 1vh;
+    caret-color: white;
+    font-size: 1.25vh;
+    font-family: filetto-regular;
+    color: white;
+    border: 0vh;
+    outline: none;
+    border-radius: 0.7vh;
+    letter-spacing: 0.075em;
+}
+
+.post-edit-form input[type='submit'] {
+    display: none;
+}
+
+// .post-item > .post-settings {
+//     display: none;
+// }
+
+// .post-item:hover .post-settings {
+//     display: block;
+// }
+
+// .post-settings i:hover {
+//     background-color: rgb(62,66,72);
+// }
+
+// .post-item > div.post-settings > ul.post-settings-dropdown {
+//     display: none;
+//     position: absolute;
+//     right: -100vh;
+// }
+
+// .post-item > div.post-settings:hover > ul.post-settings-dropdown {
+//     display: block;
+//     right: 3vh;
+//     background-color: rgb(24,25,28);
+//     border-radius: 0.5vh;
+//     padding: 0.5vh;
+// }
+
+// // .post-item > div.post-settings > ul.post-settings-dropdown:hover {
+// //     display: block;
+// // }
+
+// .post-settings ul li {
+//     padding: 1vh;
+//     border-radius: 0.5vh;
+// }
+
+// .post-settings ul li:hover {
+//     background-color: rgb(66, 74, 167);
+//     cursor: pointer;
+// }
+
+// .post-settings ul li:active {
+//     background-color: rgb(60,69,165);
+// }

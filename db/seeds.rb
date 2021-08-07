@@ -241,11 +241,6 @@ Post.create!([{
     channel_id: 1
 },
 {
-    body: 'Then what are we waiting for. Let\'s smash it.',
-    author_id: 5,
-    channel_id: 1
-},
-{
     body: 'The Ring cannot be destroyed, Gimli, son of Gloin, by any craft that we here possess.',
     author_id: 1,
     channel_id: 1
