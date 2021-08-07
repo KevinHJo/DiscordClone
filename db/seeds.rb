@@ -264,5 +264,126 @@ Post.create!([{
     body: 'One does not simply walk into Mordor.',
     author_id: 6,
     channel_id: 1
+},
+{
+    body: 'Its black gates are guarded by more than just orcs. There is evil there that does not sleep and the great eye is ever watchful.',
+    author_id: 6,
+    channel_id: 1
+},
+{
+    body: 'Tis a barren wasteland, riddled with fire and ash and dust. The very air you breathe is a poisonous fume. Not with ten thousand men could you do this. It is folly.',
+    author_id: 6,
+    channel_id: 1
+},
+{
+    body: 'Have you heard nothing Lord Elrond has said? The Ring must be destroyed',
+    author_id: 4,
+    channel_id: 1
+},
+{
+    body: 'Have you heard nothing Lord Elrond has said? The Ring must be destroyed',
+    author_id: 4,
+    channel_id: 1
+},
+{
+    body: 'and I suppose you think you\'re the one to do it.',
+    author_id: 5,
+    channel_id: 1
+},
+{
+    body: 'and if we fail what then? What happens when Sauron takes back what is his?',
+    author_id: 6,
+    channel_id: 1
+},
+{
+    body: 'I will be dead before I see the Ring in the hands of an elf.',
+    author_id: 5,
+    channel_id: 1
+},
+{
+    body: 'Never trust an elf.',
+    author_id: 5,
+    channel_id: 1
+},
+{
+    body: 'Do you not understand that while we bicker amongst ourselves, Sauron\'s power grows?! None can escape it! You\'ll all be destroyed',
+    author_id: 2,
+    channel_id: 1
+},
+{
+    body: 'I will take it',
+    author_id: 7,
+    channel_id: 1
+},
+{
+    body: 'I will take the Ring to Mordor... Though, I do not know the way',
+    author_id: 7,
+    channel_id: 1
+},
+{
+    body: 'I will help you bear this burden Frodo Baggins, as long as it is yours to bear.',
+    author_id: 2,
+    channel_id: 1
+},
+{
+    body: 'If by my life or death I can protect you, I will. You have my sword',
+    author_id: 3,
+    channel_id: 1
+},
+{
+    body: 'and you have my bow',
+    author_id: 4,
+    channel_id: 1
+},
+{
+    body: 'and my axe',
+    author_id: 5,
+    channel_id: 1
+},
+{
+    body: 'You carry the fate of us all little one. If this is indeed the will of the Council, then Gondor will see it done',
+    author_id: 6,
+    channel_id: 1
+},
+{
+    body: 'Mr Frodo\'s not going anywhere without me',
+    author_id: 8,
+    channel_id: 1
+},
+{
+    body: 'No indeed it is hardly possible to seperate you, even when he is summoned to a secret council and you are not!',
+    author_id: 1,
+    channel_id: 1
+},
+{
+    body: 'Wait! we\'re coming too!',
+    author_id: 9,
+    channel_id: 1
+},
+{
+    body: 'You\'d have to send us home tied up in a sack to stop us',
+    author_id: 9,
+    channel_id: 1
+},
+{
+    body: 'Anyway you need people of intelligence on this sort of mission... quest... thing',
+    author_id: 10,
+    channel_id: 1
+},
+{
+    body: 'Well that rules you out Pip',
+    author_id: 9,
+    channel_id: 1
+},
+{
+    body: 'Nine companions... So be it! You shall be the Fellowship of the Ring!',
+    author_id: 1,
+    channel_id: 1
+},
+{
+    body: 'Great! Where are we going?',
+    author_id: 10,
+    channel_id: 1
 }
 ])
+
