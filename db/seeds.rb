@@ -8,6 +8,7 @@
 
 User.destroy_all
 Post.destroy_all
+Server.destroy_all
 
 # User.create!([{
 #     username: 'kevin',
