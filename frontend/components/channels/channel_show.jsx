@@ -1,9 +1,41 @@
 import React from 'react';
-import PostIndexContainer from '../posts/post_index_container';
+import PostIndexContainer from '../posts/channel_posts_container';
 
 class ChannelShow extends React.Component {
     constructor(props) {
         super(props);
+        console.dir(props.channels);
+        console.dir(props.users);
+
+        this.renderChannelUserList = this.renderChannelUserList.bind(this);
+    }
+
+    componentDidMount() {
+        this.props.fetchUsers();
+    }
+
+    renderChannelUserList() {
+        if (this.props.users) {
+            return (
+                <ul className='user-list'>
+                    {this.props.users.map(user => {
+                        return (
+                        <li className='user-list-item' key={user.id}>
+                            <div className='user-profile-pic'>
+                                <img src={'/images/pfp.png'} />
+                            </div>
+
+                            <div>
+                                {user.username}
+                            </div>
+                        </li>
+                        )
+                    })}
+                </ul>
+            )
+        } else {
+            return null;
+        }
     }
 
     render() {
@@ -14,9 +46,7 @@ class ChannelShow extends React.Component {
                 </div>
 
                 <div className='channel-users'>
-                    <ul>
-
-                    </ul>
+                    {this.renderChannelUserList()}
                 </div>
             </div>
         )

@@ -1,15 +1,16 @@
 import { connect } from "react-redux";
 import ChannelShow from './channel_show';
-import { fetchChannels } from '../../actions/channel_actions'
+import { fetchUsers } from "../../actions/user_actions";
 
 const mSTP = (state, { match }) => ({
     serverId: parseInt(match.params.serverId),
     channelId: parseInt(match.params.channelId),
-    channels: state.entities.channels
+    channels: Object.values(state.entities.channels),
+    users: Object.values(state.entities.users)
 });
 
 const mDTP = dispatch => ({
-    fetchChannel: () => dispatch(fetchChannels())
+    fetchUsers: () => dispatch(fetchUsers())
 });
 
 export default connect(mSTP, mDTP)(ChannelShow)
