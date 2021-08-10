@@ -8,6 +8,7 @@
 
 User.destroy_all
 Post.destroy_all
+Channel.destroy_all
 
 # User.create!([{
 #     username: 'kevin',
@@ -94,7 +95,14 @@ User.create!([{
     username: 'kevin',
     email: 'kevin@email.com',
     password: 'password'
-}]);
+}])
+
+Channel.create!([{
+    name: 'Council of Elrond',
+    server_id: 1,
+    private: false
+}
+])
 
 Post.create!([{
     body: '	Strangers from distant lands, friends of old. You have been summoned here to answer the threat of Mordor.',

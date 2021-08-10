@@ -5,6 +5,8 @@ import { AuthRoute } from '../util/route_util';
 import LoginFormContainer from './session_form/login_form_container'
 import SignupFormContainer from './session_form/signup_form_container'
 import PostsIndexContainer from './posts/post_index_container'
+import PrivateChannelShowContainer from './channels/private_channel_show_container'
+import ChannelShowContainer from './channels/channel_show_container'
 // import AnimatedSwitch from './session_form/animated_switch';
 
 const App = () => (
@@ -16,6 +18,7 @@ const App = () => (
         <AuthRoute exact path='/login' component={LoginFormContainer}/>
         <AuthRoute exact path='/signup' component={SignupFormContainer}/>
         <Route path="/posts" component={PostsIndexContainer} />
+        <Route path="/channels/@me/:channelId" component={PrivateChannelShowContainer} />
         <Route path="/channels/:serverId/:channelId" component={ChannelShowContainer} />
     </div>
 );

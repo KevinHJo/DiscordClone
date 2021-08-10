@@ -3,9 +3,10 @@ import { receivePost, receivePosts, removePost } from '../../actions/post_action
 import { receiveUsers } from '../../actions/user_actions'
 import PostIndex from './post_index'
 
-const mSTP = state => {
-    return { 
+const mSTP = (state, ownProps) => {
+    return {
         posts: Object.values(state.entities.posts),
+        channelId: ownProps.channelId,
         users: state.entities.users,
         currentUser: state.entities.users[state.session.id]
     }

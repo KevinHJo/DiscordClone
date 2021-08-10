@@ -23,6 +23,8 @@ class Post < ApplicationRecord
         primary_key: :id,
         foreign_key: :parent_id
 
+    belongs_to :channel
+
     def created_at
         attributes['created_at'].strftime("%m/%d/%Y")
     end

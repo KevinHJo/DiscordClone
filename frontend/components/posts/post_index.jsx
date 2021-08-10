@@ -14,7 +14,7 @@ class PostIndex extends React.Component {
 
     componentDidMount() {
         App.cable.subscriptions.create(
-            {channel: "ChatChannel"},
+            {channel: "ChatChannel", threadId: this.props.channelId},
             {
                 received: data => {
                     switch (data.type) {
