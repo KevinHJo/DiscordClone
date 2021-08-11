@@ -25,17 +25,17 @@ const receiveChannelErrors = errors => ({
 });
 
 //THUNK ACTION CREATORS
-export const fetchChannels = () => dispatch => (
-    ChannelAPIUtil.fetchChannels().then(channels => (
+export const fetchChannels = () => dispatch => {
+    return ChannelAPIUtil.fetchChannels().then(channels => (
         dispatch(receiveChannels(channels))
     ))
-);
+};
 
-export const fetchChannel = channelId => dispatch => (
-    ChannelAPIUtil.fetchChannel(channelId).then(channel => (
+export const fetchChannel = channelId => dispatch => {
+    return ChannelAPIUtil.fetchChannel(channelId).then(channel => (
         dispatch(receiveChannel(channel))
     ))
-);
+};
 
 export const createChannel = channel => dispatch => (
     ChannelAPIUtil.createChannel(channel).then(channel => {

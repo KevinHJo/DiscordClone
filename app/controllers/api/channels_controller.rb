@@ -15,8 +15,8 @@ class ChannelsController < ApplicationController
     end
 
     def show
+        debugger
         @channel = Channel.find(params[:id])
-        
         if @channel
             render 'api/channels/show'
         else

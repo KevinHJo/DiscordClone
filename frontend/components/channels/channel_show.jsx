@@ -4,14 +4,12 @@ import PostIndexContainer from '../posts/channel_posts_container';
 class ChannelShow extends React.Component {
     constructor(props) {
         super(props);
-        console.dir(props.channels);
-        console.dir(props.users);
 
         this.renderChannelUserList = this.renderChannelUserList.bind(this);
     }
 
     componentDidMount() {
-        // this.props.fetchUsers();
+        this.props.fetchChannel(this.props.channelId);
     }
 
     renderChannelUserList() {
@@ -41,12 +39,18 @@ class ChannelShow extends React.Component {
     render() {
         return (
             <div className='channel'>
-                <div className='post-wall'>
-                    <PostIndexContainer channelId={this.props.channelId}/>
+                <div className='channel-header'>
+
                 </div>
 
-                <div className='channel-users'>
-                    {this.renderChannelUserList()}
+                <div className='channel-body'>
+                    <div className='post-wall'>
+                        <PostIndexContainer channelId={this.props.channelId}/>
+                    </div>
+
+                    <div className='channel-users'>
+                        {this.renderChannelUserList()}
+                    </div>
                 </div>
             </div>
         )

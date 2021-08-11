@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.channel {
+.channel-body {
     display: flex;
     height: 95vh;
 }
@@ -51,14 +51,14 @@
     width: 0.3vw;
   }
   
-  /* Track */
-  ::-webkit-scrollbar-track {
+/* Track */
+::-webkit-scrollbar-track {
     background: rgb(46,51,56);
     border-radius: 1vh;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: rgb(32,34,37);
     border-radius: 1vh;
-  }
+}

@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import ChannelShow from './channel_show';
+import { fetchChannel } from '../../actions/channel_actions'
 
 const mSTP = (state, { match }) => ({
     serverId: parseInt(match.params.serverId),
@@ -9,6 +10,7 @@ const mSTP = (state, { match }) => ({
 });
 
 const mDTP = dispatch => ({
+    fetchChannel: (channelId) => dispatch(fetchChannel(channelId))
 });
 
 export default connect(mSTP, mDTP)(ChannelShow)

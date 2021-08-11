@@ -169,16 +169,16 @@
 }
 
 //SCROLLBAR
-::-webkit-scrollbar {
+.post-history::-webkit-scrollbar {
     width: 0.35vw;
 }
   
-::-webkit-scrollbar-track {
+.post-history::-webkit-scrollbar-track {
     background: rgb(46,51,56);
     border-radius: 1vh;
 }
   
-::-webkit-scrollbar-thumb {
+.post-history::-webkit-scrollbar-thumb {
     background: rgb(32,34,37);
     border-radius: 1vh;
 }
