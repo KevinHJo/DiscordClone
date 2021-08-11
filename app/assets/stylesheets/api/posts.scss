@@ -20,7 +20,7 @@
 }
 
 .post-item:hover {
-    background-color: rgb(44, 46, 51)
+    background-color: rgb(50,53,59)
 }
 
 .post-content {
@@ -58,13 +58,14 @@
 .post-item i {
     display: none;
     position: absolute;
-    right: 5vh;
+    right: 1.5vh;
     cursor: pointer;
     top: -1vh;
+    font-size: 1vh;
     padding: .75vh;
     background-color: rgb(54,57,63);
-    box-shadow: 0vh 0vh 0.1vh black;
-    border-radius: 0.5vh;
+    box-shadow: 0vh 0vh 0.2vh black;
+    border-radius: 0.3vh;
 }
 
 .post-item:hover i {
@@ -87,8 +88,8 @@
 .active-post-settings .post-settings-dropdown {
     display: block;
     position: absolute;
-    right: 9vh;
-    bottom: -0.75vh;
+    right: 4.1vh;
+    bottom: -0.5vh;
     background-color: rgb(24,25,28);
     border-radius: 0.5vh;
     padding: 0.5vh;

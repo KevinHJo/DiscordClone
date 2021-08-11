@@ -7,7 +7,8 @@
     background-color: rgb(54,57,63);
     height: 5vh;
     border-bottom: 0.1vh solid black;
-    width: 85vw;
+    width: 100vw;
+    justify-content: space-between;
 }
 
 .channel-name {
@@ -27,20 +28,43 @@
     color: white;
 }
 
+.user-list-icon {
+    margin: 1.5vh 1.25vw 0vh 1vw;
+}
+
+.user-list-icon:hover {
+    cursor: pointer;
+}
+
+.user-list-icon i {
+    font-size: 2vh;
+    color: rgb(185,187,190);
+}
+
+.user-list-icon:hover i {
+    color: rgb(220,221,222);
+}
+
+.active i {
+    color: white;
+}
+
 .channel-body {
     display: flex;
     height: 95vh;
 }
 
 .post-wall {
-    width: 75vw;
+    width: 100vw;
 }
 
 .channel-users {
     width: 10vw;
     background: rgb(47,49,54);
     color: white;
+    border-left: 0.2vw solid rgb(54,57,63);
 }
+
 
 .user-list {
     overflow-y: scroll;

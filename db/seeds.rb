@@ -27,8 +27,11 @@ frodo = User.create!({username: 'Frodo', email: 'bagginurmom@theshire.com', pass
 sam = User.create!({username: 'Sam', email: 'poetaetoe@theshire.com', password: 'password'})
 merry = User.create!({username: 'Merry', email: 'thing1@theshire.com', password: 'password'})
 pippin = User.create!({username: 'Pippin', email: 'thing2@theshire.com', password: 'password'})
+smeagol = User.create!({username: 'Smeagol', email: 'friendly@myprecious.com', password: 'password'})
+gollum = User.create!({username: 'Gollum', email: 'notsofriendly@myprecious.com', password: 'password'})
 
 council_of_elrond = Channel.create!(name: 'Council of Elrond', server_id: 1, private: false)
+potato = Channel.create!(name: 'Po-tay-toes', server_id: 1, private: false)
 
 
 ChannelUser.create!([{
@@ -74,6 +77,26 @@ ChannelUser.create!([{
 {
     channel_id: council_of_elrond.id,
     user_id: kevin.id
+},
+{
+    channel_id: potato.id,
+    user_id: frodo.id
+},
+{
+    channel_id: potato.id,
+    user_id: sam.id
+},
+{
+    channel_id: potato.id,
+    user_id: smeagol.id
+},
+{
+    channel_id: potato.id,
+    user_id: kevin.id
+},
+{
+    channel_id: potato.id,
+    user_id: gollum.id
 }
 ])
 
@@ -367,4 +390,60 @@ Post.create!([{
     channel_id: council_of_elrond.id
 }
 ])
+
+Post.create!([{
+    body: 'What\'s it doing?! Stupid, fat hobbit! You ruins it!',
+    author_id: smeagol.id,
+    channel_id: potato.id
+},
+{
+    body: 'What\'s to ruin? There was hardly any meat on them. What we need is a few good taters',
+    author_id: sam.id,
+    channel_id: potato.id
+},
+{
+    body: 'What\'s "taters", precious? What\'s "taters", eh?',
+    author_id: smeagol.id,
+    channel_id: potato.id
+},
+{
+    body: 'Po-tay-toes!',
+    author_id: sam.id,
+    channel_id: potato.id
+},
+{
+    body: 'Boil em, mash em, stick em in a stew.',
+    author_id: sam.id,
+    channel_id: potato.id
+},
+{
+    body: 'Lovely big golden chips with a nice piece of fried fish.',
+    author_id: sam.id,
+    channel_id: potato.id
+},
+{
+    body: '>:(',
+    author_id: gollum.id,
+    channel_id: potato.id
+},
+{
+    body: 'Even you couldn\'t say no to that.',
+    author_id: sam.id,
+    channel_id: potato.id
+},
+{
+    body: 'Oh yes, we could! Spoiling nice fish!',
+    author_id: smeagol.id,
+    channel_id: potato.id
+},
+{
+    body: 'Give it to us raw, and wriggling! You keep nasty chips!',
+    author_id: smeagol.id,
+    channel_id: potato.id
+},
+{
+    body: 'You\'re hopeless.',
+    author_id: sam.id,
+    channel_id: potato.id
+}])
 
