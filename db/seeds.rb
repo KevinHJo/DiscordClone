@@ -31,8 +31,68 @@ pippin = User.create!({username: 'Pippin', email: 'thing2@theshire.com', passwor
 smeagol = User.create!({username: 'Smeagol', email: 'friendly@myprecious.com', password: 'password'})
 gollum = User.create!({username: 'Gollum', email: 'notsofriendly@myprecious.com', password: 'password'})
 
-council_of_elrond = Channel.create!(name: 'Council of Elrond', server_id: 1, private: false)
-potato = Channel.create!(name: 'Po-tay-toes', server_id: 1, private: false)
+lotr = Server.create!(name: 'LoTR', owner_id: kevin.id)
+
+ServerUser.create!([{
+    server_id: lotr.id,
+    user_id: elrond.id
+},
+{
+    server_id: lotr.id,
+    user_id: gandalf.id
+},
+{
+    server_id: lotr.id,
+    user_id: aragorn.id
+},
+{
+    server_id: lotr.id,
+    user_id: legolas.id
+},
+{
+    server_id: lotr.id,
+    user_id: gimli.id
+},
+{
+    server_id: lotr.id,
+    user_id: boromir.id
+},
+{
+    server_id: lotr.id,
+    user_id: frodo.id
+},
+{
+    server_id: lotr.id,
+    user_id: sam.id
+},
+{
+    server_id: lotr.id,
+    user_id: merry.id
+},
+{
+    server_id: lotr.id,
+    user_id: pippin.id
+},
+{
+    server_id: lotr.id,
+    user_id: rachael.id
+},
+{
+    server_id: lotr.id,
+    user_id: smeagol.id
+},
+{
+    server_id: lotr.id,
+    user_id: kevin.id
+},
+{
+    server_id: lotr.id,
+    user_id: gollum.id
+}
+])
+
+council_of_elrond = Channel.create!(name: 'Council of Elrond', server_id: lotr.id, private: false)
+potato = Channel.create!(name: 'Po-tay-toes', server_id: lotr.id, private: false)
 
 
 ChannelUser.create!([{

@@ -21,6 +21,12 @@ class User < ApplicationRecord
         class_name: :Post,
         foreign_key: :author_id,
         primary_key: :id
+
+    has_many :server_users
+    has_many :servers, through: :server_users
+
+    has_many :channel_users
+    has_many :channels, through: :channel_users
     
     attr_reader :password
 
