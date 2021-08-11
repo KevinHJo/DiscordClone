@@ -1,6 +1,11 @@
 class Api::ServersController < ApplicationController
     def index
-        @servers = Server.all
+        if params[:user_id]
+            @servers = User.find(params[:user_id]).servers
+        else
+            @servers = Server.all
+        end
+
         render 'api/servers/index'
     end
 
