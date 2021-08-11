@@ -1,7 +1,6 @@
 // // Place all the styles related to the api::posts controller here.
 // // They will automatically be included in application.css.
 // // You can use Sass (SCSS) here: http://sass-lang.com/
-
 .posts {
     background-color: rgb(54,57,63);
     color: rgb(220,221,222);
@@ -21,7 +20,7 @@
 }
 
 .post-item:hover {
-    background-color: rgb(44, 46, 51)
+    background-color: rgb(50,53,59)
 }
 
 .post-content {
@@ -29,7 +28,7 @@
 }
 
 .post-profile-pic img {
-    height: 3vh;
+    height: 4vh;
     padding-right: 1vh;
 }
 
@@ -41,30 +40,32 @@
 .post-author {
     padding-right: 0.75vh;
     font-family: sf-arborcrest-heavy;
-    font-size: 1.5vh;
+    font-size: 1.75vh;
 }
 
 .post-date {
     font-family: sf-arborcrest-medium;
-    font-size: 1vh;
+    font-size: 1.25vh;
+    letter-spacing: 0.1vw;
     color: rgb(102,118,125);
 }
 
 .post-body {
     padding-top: 0.75vh;
-    font-size: 1.25vh;
+    font-size: 1.75vh;
 }
 
 .post-item i {
     display: none;
     position: absolute;
-    right: 5vh;
+    right: 1.5vh;
     cursor: pointer;
     top: -1vh;
+    font-size: 1vh;
     padding: .75vh;
     background-color: rgb(54,57,63);
-    box-shadow: 0vh 0vh 0.1vh black;
-    border-radius: 0.5vh;
+    box-shadow: 0vh 0vh 0.2vh black;
+    border-radius: 0.3vh;
 }
 
 .post-item:hover i {
@@ -87,8 +88,8 @@
 .active-post-settings .post-settings-dropdown {
     display: block;
     position: absolute;
-    right: 9vh;
-    bottom: -0.75vh;
+    right: 4.1vh;
+    bottom: -0.5vh;
     background-color: rgb(24,25,28);
     border-radius: 0.5vh;
     padding: 0.5vh;
@@ -111,9 +112,10 @@
 .post-form input[type='text'] {
     background-color: rgb(64,68,75);
     padding: 0.75vh 2vh 0.75vh 2vh;
-    width: 95vw;
+    width: 95%;  //95vw;
     height: 1.75vh;
-    margin-left: 2.5vh;
+    margin-left: 0.75%;
+    margin-right: 1%;
     margin-bottom: 1vh;
     caret-color: white;
     font-size: 1.25vh;
@@ -169,46 +171,17 @@
     display: none;
 }
 
-// .post-item > .post-settings {
-//     display: none;
-// }
-
-// .post-item:hover .post-settings {
-//     display: block;
-// }
-
-// .post-settings i:hover {
-//     background-color: rgb(62,66,72);
-// }
-
-// .post-item > div.post-settings > ul.post-settings-dropdown {
-//     display: none;
-//     position: absolute;
-//     right: -100vh;
-// }
-
-// .post-item > div.post-settings:hover > ul.post-settings-dropdown {
-//     display: block;
-//     right: 3vh;
-//     background-color: rgb(24,25,28);
-//     border-radius: 0.5vh;
-//     padding: 0.5vh;
-// }
-
-// // .post-item > div.post-settings > ul.post-settings-dropdown:hover {
-// //     display: block;
-// // }
-
-// .post-settings ul li {
-//     padding: 1vh;
-//     border-radius: 0.5vh;
-// }
-
-// .post-settings ul li:hover {
-//     background-color: rgb(66, 74, 167);
-//     cursor: pointer;
-// }
-
-// .post-settings ul li:active {
-//     background-color: rgb(60,69,165);
-// }
+//SCROLLBAR
+.post-history::-webkit-scrollbar {
+    width: 0.35vw;
+}
+  
+.post-history::-webkit-scrollbar-track {
+    background: rgb(46,51,56);
+    border-radius: 5vh;
+}
+  
+.post-history::-webkit-scrollbar-thumb {
+    background: rgb(32,34,37);
+    border-radius: 5vh;
+}

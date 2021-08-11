@@ -1,0 +1,113 @@
+// Place all the styles related to the channels controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.channel-header {
+    display: flex;
+    background-color: rgb(54,57,63);
+    height: 5vh;
+    border-bottom: 0.1vh solid black;
+    width: 100vw;
+    justify-content: space-between;
+}
+
+.channel-name {
+    display: flex;
+}
+
+.channel-name i {
+    font-size: 2.25vh;
+    padding: 1.5vh 1.25vw 0vh 1vw;
+    color: rgb(114,118,125);
+}
+
+.channel-name p {
+    padding-top: 1.8vh;
+    font-family: sf-arborcrest-heavy;
+    font-size: 1.5vh;
+    color: white;
+}
+
+.user-list-icon {
+    margin: 1.5vh 1.25vw 0vh 1vw;
+}
+
+.user-list-icon:hover {
+    cursor: pointer;
+}
+
+.user-list-icon i {
+    font-size: 2vh;
+    color: rgb(185,187,190);
+}
+
+.user-list-icon:hover i {
+    color: rgb(220,221,222);
+}
+
+.active i {
+    color: white;
+}
+
+.channel-body {
+    display: flex;
+    height: 95vh;
+}
+
+.post-wall {
+    width: 100vw;
+}
+
+.channel-users {
+    width: 10vw;
+    background: rgb(47,49,54);
+    color: white;
+    border-left: 0.2vw solid rgb(54,57,63);
+}
+
+
+.user-list {
+    overflow-y: scroll;
+    max-height: 95vh;
+    padding-top: 1vh;
+}
+
+.user-list-item {
+    display: flex;
+    margin-top: 0.8vh;
+    padding-left: 0.5vw;
+}
+
+.user-list-item:hover {
+    background-color: rgb(51,54,60);
+    cursor: pointer;
+}
+
+.user-profile-pic img {
+    height: 3vh;
+    padding-right: 1vh;
+}
+
+.user-list-item p {
+    padding-top: 0.7vh;
+    font-family: sf-arborcrest-heavy;
+    font-size: 1.5vh;
+    color: rgb(142,139,138);
+}
+
+//SCROLLBAR
+::-webkit-scrollbar {
+    width: 0.3vw;
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(46,51,56);
+    border-radius: 3vh;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(32,34,37);
+    border-radius: 3vh;
+}
