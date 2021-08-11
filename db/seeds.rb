@@ -10,6 +10,7 @@ User.destroy_all
 Post.destroy_all
 Channel.destroy_all
 ChannelUser.destroy_all
+Server.destroy_all
 
 kevin = User.create!({username: 'kevin', email: 'kevin@email.com', password: 'password'})
 rachael = User.create!({username: 'rachael', email: 'rachael@email.com', password: 'password'})
