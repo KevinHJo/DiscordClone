@@ -9,6 +9,7 @@
 User.destroy_all
 Post.destroy_all
 Channel.destroy_all
+ChannelUser.destroy_all
 
 # User.create!([{
 #     username: 'kevin',
@@ -101,6 +102,52 @@ Channel.create!([{
     name: 'Council of Elrond',
     server_id: 1,
     private: false
+}
+])
+
+ChannelUser.create!([{
+    channel_id: Channel.find_by(name: 'Council of Elrond').id,
+    user_id: User.find_by(username: 'Elrond').id
+},
+{
+    channel_id: Channel.find_by(name: 'Council of Elrond').id,
+    user_id: User.find_by(username: 'Gandalf').id
+},
+{
+    channel_id: Channel.find_by(name: 'Council of Elrond').id,
+    user_id: User.find_by(username: 'Aragorn').id
+},
+{
+    channel_id: Channel.find_by(name: 'Council of Elrond').id,
+    user_id: User.find_by(username: 'Legolas').id
+},
+{
+    channel_id: Channel.find_by(name: 'Council of Elrond').id,
+    user_id: User.find_by(username: 'Gimli').id
+},
+{
+    channel_id: Channel.find_by(name: 'Council of Elrond').id,
+    user_id: User.find_by(username: 'Boromir').id
+},
+{
+    channel_id: Channel.find_by(name: 'Council of Elrond').id,
+    user_id: User.find_by(username: 'Frodo').id
+},
+{
+    channel_id: Channel.find_by(name: 'Council of Elrond').id,
+    user_id: User.find_by(username: 'Sam').id
+},
+{
+    channel_id: Channel.find_by(name: 'Council of Elrond').id,
+    user_id: User.find_by(username: 'Merry').id
+},
+{
+    channel_id: Channel.find_by(name: 'Council of Elrond').id,
+    user_id: User.find_by(username: 'Pippin').id
+},
+{
+    channel_id: Channel.find_by(name: 'Council of Elrond').id,
+    user_id: User.find_by(username: 'kevin').id
 }
 ])
 

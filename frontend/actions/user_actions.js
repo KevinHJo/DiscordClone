@@ -1,4 +1,4 @@
-import * as SessionAPIUtil from '../util/session_api_util'
+// import * as SessionAPIUtil from '../util/session_api_util'
 
 export const RECEIVE_USERS = 'RECEIVE_USERS'
 
@@ -7,8 +7,8 @@ export const receiveUsers = users => ({
     users
 });
 
-export const fetchUsers = () => dispatch => (
-    SessionAPIUtil.fetchUsers().then(users => {
-        dispatch(receiveUsers(users))
-    })
-);
+// export const fetchUsers = () => dispatch => (
+//     SessionAPIUtil.fetchUsers().then(users => {
+//         dispatch(receiveUsers(users))
+//     })
+// );

@@ -62,10 +62,10 @@ class ChannelPosts extends React.Component {
             )
         } else {
             return (
-                <li>
+                <div>
                     <p>Loading Posts</p>
                     <div ref={this.bottom}/>
-                </li>
+                </div>
             )
         } 
     }

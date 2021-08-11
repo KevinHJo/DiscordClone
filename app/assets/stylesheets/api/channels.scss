@@ -1,3 +1,64 @@
 // Place all the styles related to the channels controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.channel {
+    display: flex;
+    height: 95vh;
+}
+
+.post-wall {
+    width: 75vw;
+}
+
+.channel-users {
+    width: 10vw;
+    background: rgb(47,49,54);
+    color: white;
+}
+
+.user-list {
+    overflow-y: scroll;
+    max-height: 95vh;
+    padding-top: 1vh;
+}
+
+.user-list-item {
+    display: flex;
+    padding-top: 0.5vh;
+    padding-left: 0.5vw;
+}
+
+.user-list-item:hover {
+    background-color: rgb(51,54,60);
+    cursor: pointer;
+}
+
+.user-profile-pic img {
+    height: 2.75vh;
+    padding-right: 1vh;
+}
+
+.user-list-item p {
+    padding-top: 0.6vh;
+    font-family: sf-arborcrest-heavy;
+    font-size: 1.25vh;
+    color: rgb(142,139,138);
+}
+
+//SCROLLBAR
+::-webkit-scrollbar {
+    width: 0.3vw;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgb(46,51,56);
+    border-radius: 1vh;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(32,34,37);
+    border-radius: 1vh;
+  }

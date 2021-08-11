@@ -11,7 +11,7 @@ class ChannelShow extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchUsers();
+        // this.props.fetchUsers();
     }
 
     renderChannelUserList() {
@@ -25,9 +25,9 @@ class ChannelShow extends React.Component {
                                 <img src={'/images/pfp.png'} />
                             </div>
 
-                            <div>
+                            <p>
                                 {user.username}
-                            </div>
+                            </p>
                         </li>
                         )
                     })}

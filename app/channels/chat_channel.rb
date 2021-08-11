@@ -12,8 +12,9 @@ class ChatChannel < ApplicationCable::Channel
   end
 
   def load
-    posts = Channel.find(params['threadId']).posts
-    users = User.all
+    channel = Channel.find(params['threadId'])
+    posts = channel.posts
+    users = channel.users
     socket = { posts: posts, type: 'posts', users: users }
     ChatChannel.broadcast_to("chat_channel_#{params['threadId']}", socket)
   end
