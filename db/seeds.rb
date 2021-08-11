@@ -80,6 +80,10 @@ ChannelUser.create!([{
     user_id: kevin.id
 },
 {
+    channel_id: council_of_elrond.id,
+    user_id: rachael.id
+},
+{
     channel_id: potato.id,
     user_id: frodo.id
 },
