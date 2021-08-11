@@ -28,7 +28,7 @@
 }
 
 .post-profile-pic img {
-    height: 3vh;
+    height: 4vh;
     padding-right: 1vh;
 }
 
@@ -40,18 +40,19 @@
 .post-author {
     padding-right: 0.75vh;
     font-family: sf-arborcrest-heavy;
-    font-size: 1.5vh;
+    font-size: 1.75vh;
 }
 
 .post-date {
     font-family: sf-arborcrest-medium;
-    font-size: 1vh;
+    font-size: 1.25vh;
+    letter-spacing: 0.1vw;
     color: rgb(102,118,125);
 }
 
 .post-body {
     padding-top: 0.75vh;
-    font-size: 1.25vh;
+    font-size: 1.75vh;
 }
 
 .post-item i {
@@ -110,9 +111,10 @@
 .post-form input[type='text'] {
     background-color: rgb(64,68,75);
     padding: 0.75vh 2vh 0.75vh 2vh;
-    width: 70vw;  //95vw;
+    width: 95%;  //95vw;
     height: 1.75vh;
-    margin-left: 0.75vh;
+    margin-left: 0.75%;
+    margin-right: 1%;
     margin-bottom: 1vh;
     caret-color: white;
     font-size: 1.25vh;
@@ -175,10 +177,10 @@
   
 .post-history::-webkit-scrollbar-track {
     background: rgb(46,51,56);
-    border-radius: 1vh;
+    border-radius: 5vh;
 }
   
 .post-history::-webkit-scrollbar-thumb {
     background: rgb(32,34,37);
-    border-radius: 1vh;
+    border-radius: 5vh;
 }

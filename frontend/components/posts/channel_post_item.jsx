@@ -57,7 +57,7 @@ class ChannelPostItem extends React.Component {
         } else {
             return (
                 <div className='post-settings'>
-                    <i className={"fas fa-ellipsis-h"} onClick={this.toggleSelected}></i>
+                    <i className="fas fa-ellipsis-h" onClick={this.toggleSelected}></i>
                     <ul className='post-settings-dropdown'>
                         <li className='edit-item' onClick={this.toggleEditing}>Edit message</li>
                         <li className='delete-item' onClick={this.deletePost}>Delete message</li>

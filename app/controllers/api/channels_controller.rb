@@ -1,4 +1,4 @@
-class ChannelsController < ApplicationController
+class Api::ChannelsController < ApplicationController
     def create
         @channel = Channel.new(channel_params)
         
@@ -15,7 +15,6 @@ class ChannelsController < ApplicationController
     end
 
     def show
-        debugger
         @channel = Channel.find(params[:id])
         if @channel
             render 'api/channels/show'

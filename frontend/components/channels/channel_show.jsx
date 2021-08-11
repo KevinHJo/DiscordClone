@@ -6,6 +6,7 @@ class ChannelShow extends React.Component {
         super(props);
 
         this.renderChannelUserList = this.renderChannelUserList.bind(this);
+        this.renderChannelHeader = this.renderChannelHeader.bind(this);
     }
 
     componentDidMount() {
@@ -36,12 +37,25 @@ class ChannelShow extends React.Component {
         }
     }
 
+    renderChannelHeader() {
+        if(this.props.channel) {
+            return (
+                <div className='channel-header'>
+                    <div className='channel-name'>
+                        <i className="fas fa-hashtag"></i>
+                        <p>{this.props.channel.name}</p>
+                    </div>
+                </div>
+            )
+        } else {
+            return null
+        }
+    }
+
     render() {
         return (
             <div className='channel'>
-                <div className='channel-header'>
-
-                </div>
+                {this.renderChannelHeader()}
 
                 <div className='channel-body'>
                     <div className='post-wall'>

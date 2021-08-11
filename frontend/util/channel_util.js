@@ -6,7 +6,6 @@ export const fetchChannels = () => (
 );
 
 export const fetchChannel = (channelId) => {
-    debugger
     return $.ajax({
         method: 'GET',
         url: `/api/channels/${channelId}`

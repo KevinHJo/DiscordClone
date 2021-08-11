@@ -2,6 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.channel-header {
+    display: flex;
+    background-color: rgb(54,57,63);
+    height: 5vh;
+    border-bottom: 0.1vh solid black;
+    width: 85vw;
+}
+
+.channel-name {
+    display: flex;
+}
+
+.channel-name i {
+    font-size: 2.25vh;
+    padding: 1.5vh 1.25vw 0vh 1vw;
+    color: rgb(114,118,125);
+}
+
+.channel-name p {
+    padding-top: 1.8vh;
+    font-family: sf-arborcrest-heavy;
+    font-size: 1.5vh;
+    color: white;
+}
+
 .channel-body {
     display: flex;
     height: 95vh;
@@ -25,7 +50,7 @@
 
 .user-list-item {
     display: flex;
-    padding-top: 0.5vh;
+    margin-top: 0.8vh;
     padding-left: 0.5vw;
 }
 
@@ -35,14 +60,14 @@
 }
 
 .user-profile-pic img {
-    height: 2.75vh;
+    height: 3vh;
     padding-right: 1vh;
 }
 
 .user-list-item p {
-    padding-top: 0.6vh;
+    padding-top: 0.7vh;
     font-family: sf-arborcrest-heavy;
-    font-size: 1.25vh;
+    font-size: 1.5vh;
     color: rgb(142,139,138);
 }
 
@@ -54,11 +79,11 @@
 /* Track */
 ::-webkit-scrollbar-track {
     background: rgb(46,51,56);
-    border-radius: 1vh;
+    border-radius: 3vh;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: rgb(32,34,37);
-    border-radius: 1vh;
+    border-radius: 3vh;
 }

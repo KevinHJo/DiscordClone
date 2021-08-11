@@ -5,7 +5,7 @@ import { fetchChannel } from '../../actions/channel_actions'
 const mSTP = (state, { match }) => ({
     serverId: parseInt(match.params.serverId),
     channelId: parseInt(match.params.channelId),
-    channels: Object.values(state.entities.channels),
+    channel: state.entities.channels[match.params.channelId],
     users: Object.values(state.entities.users)
 });
 
