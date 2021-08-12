@@ -5,20 +5,20 @@ class ServerShow extends React.Component {
     constructor(props) {
         super(props);
 
-        this.renderChannelList = this.renderChannelList.bind(this);
+        this.renderTextChannelList = this.renderTextChannelList.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchServer(this.props.serverId);
     }
 
-    renderChannelList() {
+    renderTextChannelList() {
         return (
-            <ul>
+            <ul class='server-channel-list'>
                 {
                     this.props.server.serverChannels.map(channel => {
                         return (
-                            <li key={channel.id}>
+                            <li className= 'server-channel' key={channel.id}>
                                 <i className="fas fa-hashtag"></i>
                                 <p>{channel.name}</p>
                             </li>
@@ -35,14 +35,20 @@ class ServerShow extends React.Component {
                 <div className='server'>
                     <div className='server-panel'>
                         <div className='server-header'>
-                            {this.props.server.name}
+                            <p className='server-name'>{this.props.server.name}</p>
                         </div>
 
-                        <div className='server-channels'>
-                            {this.renderChannelList()}
+                        <div className='text-channels'>
+                            <div className='channel-list-header'>
+                                <h2>TEXT CHANNELS</h2>
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            
+                            {this.renderTextChannelList()}
                         </div>
+                        
 
-                        <div className='user-settings'>
+                        <div className='user-panel'>
                             <div className='user-profile-pic'>
                                 <img src={'/images/pfp.png'} />
                             </div>

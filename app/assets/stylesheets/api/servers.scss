@@ -1,3 +1,107 @@
 // Place all the styles related to the api::servers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.server {
+    display: flex;
+}
+
+.server-panel {
+    width: 9vw;
+    position: relative;
+}
+
+.server-header {
+    height: 5vh;
+    background-color: rgb(47,49,54);
+    border-bottom: 0.1vh solid black;
+}
+
+.server-header .server-name {
+    color: white;
+    font-family: sf-arborcrest-heavy;
+    font-size: 1.5vh;
+    padding: 1.8vh 0vw 0vh 1vw;
+}
+
+.text-channels {
+    background-color: rgb(47,49,54);
+    height: 90vh;
+    color: rgb(142,146,151);
+    overflow-y: scroll;
+    padding: 1.5vh 0vw 0vh 0.5vw;
+}
+
+.channel-list-header {
+    display: flex;
+    margin-bottom: 0.5vh;
+}
+
+.channel-list-header h2 {
+    font-size: 1.2vh;
+    font-family: sf-arborcrest-heavy;
+}
+
+.channel-list-header i {
+    font-size: 1.2vh;
+    padding: 0.07vh 0vw 0vh 2.7vw;
+}
+
+.server-channel {
+    display: flex;
+    font-size: 1.5vh;
+    padding: 0.5vh 0vw 0.5vh 0.2vw;
+    margin-right: 0.5vw;
+}
+
+.server-channel i {
+    padding-right: 0.2vw;
+}
+
+.user-panel {
+    height: 5vh;
+    width: 9vw;
+    display: flex;
+    position: absolute;
+    bottom: 0vh;
+    background-color: rgb(41,43,47);
+}
+
+.user-profile-pic img {
+    height: 3vh;
+    padding: 1vh 0.5vw 0vh 0.5vw;
+}
+
+.user-panel-username {
+    color: white;
+    font-family: sf-arborcrest-heavy;
+    font-size: 1.5vh;
+    padding-top: 1.8vh;
+}
+
+.user-settings-nav {
+    color: rgb(185,187,190);
+    display: flex;
+    padding-top: 1.8vh;
+    padding-left: 3vw;
+}
+
+.user-settings-nav i {
+    font-size: 1.5vh;
+}
+
+//SCROLLBAR
+::-webkit-scrollbar {
+    width: 0.3vw;
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(46,51,56);
+    border-radius: 3vh;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(32,34,37);
+    border-radius: 3vh;
+}
