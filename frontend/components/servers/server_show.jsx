@@ -1,15 +1,26 @@
 import React from 'react';
 import ChannelShowContainer from '../channels/channel_show_container';
+import ChannelForm from '../channels/channel_form'
 
 class ServerShow extends React.Component {
     constructor(props) {
         super(props);
 
         this.renderTextChannelList = this.renderTextChannelList.bind(this);
+        this.selectActiveChannel = this.selectActiveChannel.bind(this);
+        this.displayChannelForm = this.displayChannelForm.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchServer(this.props.serverId);
+    }
+
+    selectActiveChannel(id) {
+        if (id === this.props.channelId) {
+            return 'server-channel active';
+        } else {
+            return 'server-channel';
+        }
     }
 
     renderTextChannelList() {
@@ -18,7 +29,7 @@ class ServerShow extends React.Component {
                 {
                     this.props.server.serverChannels.map(channel => {
                         return (
-                            <li className= 'server-channel' key={channel.id}>
+                            <li className={this.selectActiveChannel(channel.id)} key={channel.id}>
                                 <i className="fas fa-hashtag"></i>
                                 <p>{channel.name}</p>
                             </li>
@@ -27,6 +38,31 @@ class ServerShow extends React.Component {
                 }
             </ul>
         )
+    }
+
+    renderChannelListHeader() {
+        if (this.props.currentUser.id === this.props.server.owner_id) {
+            return (
+                <div className='channel-list-header'>
+                    <h2>TEXT CHANNELS</h2>
+                    <i class="fas fa-plus" onClick={this.displayChannelForm}></i>
+                </div>
+            )
+        } else {
+            return (
+                <div className='channel-list-header'>
+                    <h2>TEXT CHANNELS</h2>
+                </div>
+            )
+        }
+    }
+
+    displayChannelForm(e) {
+        e.preventDefault();
+        const channelForm = document.getElementsByClassName('channel-form-container')[0];
+        const closeFormBtn = document.getElementsByClassName('close-channel-form')[0];
+        console.dir(channelForm);
+        console.dir(closeFormBtn);
     }
     
     render() {
@@ -39,11 +75,7 @@ class ServerShow extends React.Component {
                         </div>
 
                         <div className='text-channels'>
-                            <div className='channel-list-header'>
-                                <h2>TEXT CHANNELS</h2>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                            
+                            {this.renderChannelListHeader()}
                             {this.renderTextChannelList()}
                         </div>
                         
@@ -61,6 +93,7 @@ class ServerShow extends React.Component {
                     </div>
 
                     <ChannelShowContainer channelId={this.props.channelId}/>
+                    <ChannelForm createChannel={this.props.createChannel} serverId={this.props.serverId}/>
                 </div>
             )
         } else {
