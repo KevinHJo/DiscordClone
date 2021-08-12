@@ -2,16 +2,17 @@ import { connect } from "react-redux";
 import ServerShow from './server_show';
 import { fetchServer } from '../../actions/server_actions'
 
-const mSTP = (state, { match }) => ({
-    serverId: parseInt(match.params.serverId),
+const mSTP = (state, { match }) => {
+    return {
     channelId: parseInt(match.params.channelId),
+    serverId: parseInt(match.params.serverId),
     server: state.entities.servers[match.params.serverId],
-    channel: state.entities.channels[match.params.channelId],
-    users: Object.values(state.entities.users)
-});
+    currentUser: state.entities.users[state.session.id]
+    }
+};
 
 const mDTP = dispatch => ({
-    fetchServer = serverId => dispatch(fetchServer(serverId))
+    fetchServer: serverId => dispatch(fetchServer(serverId))
 });
 
 export default connect(mSTP, mDTP)(ServerShow)

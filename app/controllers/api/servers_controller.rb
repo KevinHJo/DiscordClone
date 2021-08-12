@@ -11,7 +11,7 @@ class Api::ServersController < ApplicationController
 
     def show
         @server = Server.find(params[:id])
-
+        @channels = @server.channels
         if @server
             render 'api/servers/show'
         else
