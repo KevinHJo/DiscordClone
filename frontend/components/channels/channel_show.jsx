@@ -1,5 +1,5 @@
 import React from 'react';
-import PostIndexContainer from '../posts/channel_posts_container';
+import ChannelPostsContainer from '../posts/channel_posts_container';
 
 class ChannelShow extends React.Component {
     constructor(props) {
@@ -81,7 +81,7 @@ class ChannelShow extends React.Component {
 
                 <div className='channel-body'>
                     <div className='post-wall'>
-                        <PostIndexContainer channelId={this.props.channelId}/>
+                        <ChannelPostsContainer channelId={this.props.channelId}/>
                     </div>
 
                     {this.renderChannelUserList()}
