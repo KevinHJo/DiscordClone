@@ -5,6 +5,7 @@
     background-color: rgb(54,57,63);
     color: rgb(220,221,222);
     height: 95vh;
+    position: relative;
 }
 
 .post-history {
@@ -16,7 +17,7 @@
     display: flex;
     justify-content:space-between;
     padding: 1vh 1vh 1vh 0.75vh;
-    position:relative;
+    position: relative;
 }
 
 .post-item:hover {
@@ -112,11 +113,11 @@
 .post-form input[type='text'] {
     background-color: rgb(64,68,75);
     padding: 0.75vh 2vh 0.75vh 2vh;
-    width: 95%;  //95vw;
+    width: 76vw;
     height: 1.75vh;
-    margin-left: 0.75%;
-    margin-right: 1%;
-    margin-bottom: 1vh;
+    position: absolute;
+    left: 1vw;
+    bottom: 2vh;
     caret-color: white;
     font-size: 1.25vh;
     font-family: filetto-regular;
@@ -154,7 +155,7 @@
 .post-edit-form input[type='text'] {
     background-color: rgb(64,68,75);
     padding: 0.75vh 2vh 0.75vh 1vh;
-    width: 85vw;
+    width: 70vw;
     height: 1.75vh;
     margin-top: 1vh;
     caret-color: white;

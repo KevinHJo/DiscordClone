@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import SessionForm from './session_form'
 import { login } from '../../actions/session_actions'
 import { Link } from "react-router-dom";
-import { removeSessionErrors } from '../../actions/session_actions'
+import { removeSessionErrors } from '../../actions/session_actions';
 
 const mSTP = state => ({
     errors: state.errors.session,

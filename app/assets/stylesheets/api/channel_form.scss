@@ -1,0 +1,146 @@
+.channel-form-container {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0, 0.8);
+}
+
+.channel-form-content {
+    background-color: rgb(54,57,63);
+    height: 24vh;
+    width: 25vw;
+    margin:auto;
+    margin-top: 30vh;
+    border-radius: 0.5vh;
+    box-shadow: 0vh 0vh 1vh black;
+    position: relative;
+}
+
+.channel-form-title {
+    width: 15vw;
+    margin: auto;
+    text-align:center;
+    padding-top: 3vh;
+}
+
+.channel-form-title h2 {
+    color: white;
+    font-family: sf-arborcrest-heavy;
+    font-size: 3vh;
+}
+
+.channel-form-title h3 {
+    color: rgb(180,182,185);
+    font-family: sf-arborcrest-light;
+    font-size: 1.5vh;
+}
+
+.close-channel-form i {
+    color: rgb(119,121,126);
+    font-size: 3vh;
+    height: 2vh;
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
+}
+
+.close-channel-form:hover i {
+    color: white;
+    cursor: pointer;
+}
+
+.channel-form-content form {
+    position: relative;
+}
+
+.channel-form-content form h3 {
+    font-family: sf-arborcrest-heavy;
+    font-size: 1.5vh;
+    color: white;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    margin-left: 1vw;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper i {
+    position: absolute;
+    top: 1.2vh;
+    left: 1.5vw;
+    color: white;
+}
+
+.input-wrapper input[type='text'] {
+    background-color: rgb(48,51,56);
+    border: 1px solid rgb(32, 34, 37);
+    border-radius: 0.5vh;
+    height: 3.5vh;
+    width: 20.5vw;
+    padding-left: 2vw;
+    margin-left: 1vw;
+    color: white;
+    font-size: 1.25vh;
+}
+
+.input-wrapper input[type='text']:focus {
+    border: 1px solid black;
+}
+
+.private-checkbox {
+    display: flex;
+    margin-top: 2vh;
+}
+
+.private-input-title {
+    display: flex;
+}
+
+.private-input-title i {
+    color: rgb(174,175,178)
+}
+
+.channel-form-footer {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(47,49,54);
+    margin-top: 2vh;
+    border-radius: 0.5vh;
+}
+
+button.close-channel-form {
+    font-size: 1.5vh;
+    background-color: transparent;
+    margin-right: 1vw;
+    margin-top: 1vh;
+}
+
+button.close-channel-form:hover {
+    cursor: pointer;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.channel-form-footer input[type='submit'] {
+    height: 3.5vh;
+    width: 7vw;
+    margin-top: 1.5vh;
+    margin-right: 1vw;
+    background-color: rgb(88,101,242);
+    border: none;
+    border-radius: 0.25vh;
+    color: white;
+    font-size: 1.25vh;
+}
+
+.channel-form-footer input[type='submit']:hover {
+    cursor: pointer;
+    background-color: rgb(71,82,196);
+}
