@@ -34,11 +34,13 @@ class ChannelForm extends React.Component {
             <div className='channel-form-container'>
                 <div className='channel-form-content'>
                     <span className='channel-form-header'>
-                        <div>
+                        <div className='channel-form-title'>
                             <h2>Create text channel</h2>
                             <h3>in Text Channels</h3>
                         </div>
-                        <div className='close-channel-form'>&times;</div>
+                        <div className='close-channel-form'>
+                            <i className="fas fa-times"></i>
+                        </div>
                     </span>
 
                     <form onSubmit={this.handleSubmit}>
@@ -48,13 +50,18 @@ class ChannelForm extends React.Component {
                             <input type="text" value='' placeholder='new-channel' onChange={this.updateName}/>
                         </div>
                         
-                        <div className='private-checkbox'>
+                        {/* <div className='private-checkbox'>
                             <div className='private-input-title'>
-                                <i class="fas fa-lock"></i>
+                                <i className="fas fa-lock"></i>
                                 <h3>Private Channel</h3>
                             </div>
                             <input type="checkbox" checked={this.state.private} onChange={this.updatePrivate}/>
+                        </div> */}
+                        <div className='channel-form-footer'>
+                            <button className='close-channel-form'>Cancel</button>
+                            <input type="submit" value='Create channel'/>
                         </div>
+                        
                     </form>
                 </div>
             </div>
