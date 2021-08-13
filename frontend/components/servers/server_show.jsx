@@ -1,4 +1,5 @@
 import React from 'react';
+import ServerIndexContainer from './server_index_container'
 import ChannelShowContainer from '../channels/channel_show_container';
 import ChannelForm from '../channels/channel_form'
 import UserSettings from '../users/user_settings';
@@ -20,6 +21,7 @@ class ServerShow extends React.Component {
 
     componentDidMount() {
         this.props.fetchServer(this.props.serverId);
+        // this.props.fetchUserServers(this.props.currentUser.id);
         this.props.fetchChannel(this.props.channelId);
         this.setState({channel: this.props.channel})
     }
@@ -79,18 +81,21 @@ class ServerShow extends React.Component {
     displayChannelForm(e) {
         e.preventDefault();
         const channelForm = document.getElementsByClassName('channel-form-container')[0];
-        channelForm.style.display = 'block'
+        channelForm.style.display = 'block';
     }
 
     displayUserSettings(e) {
         e.preventDefault();
+        const userSettings = document.getElementsByClassName('user-settings-container')[0];
+        userSettings.style.display = 'block';
     }
     
     render() {
-        console.dir(this.props);
         if (this.props.server && this.props.channel) {
             return (
                 <div className='server'>
+                    <ServerIndexContainer userServers={this.props.userServers}/>
+
                     <div className='server-panel'>
                         <div className='server-header'>
                             <p className='server-name'>{this.props.server.name}</p>
