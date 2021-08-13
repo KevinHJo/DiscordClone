@@ -4,7 +4,7 @@
 
 ## Table of Contents
 + [Technologies](#technologies)
-+ [Channels](#channels)
++ [Channels](#servers-and-channels)
 
 ## Technologies
 + Discord Clone utilizes a rails backend to manage and access a postgresql database.
