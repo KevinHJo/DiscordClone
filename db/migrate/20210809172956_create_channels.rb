@@ -7,10 +7,7 @@ class CreateChannels < ActiveRecord::Migration[5.2]
       t.boolean :private, null: false
       t.timestamps
     end
-
+    
     add_index :channels, :server_id
-
-      t.timestamps
-    end
   end
 end
