@@ -12,7 +12,6 @@ class UserSettings extends React.Component {
                 <button onClick={this.props.logout}>Log Out</button>
             </div>
         )
-        
     }
 }
 

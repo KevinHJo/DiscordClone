@@ -7,15 +7,21 @@ import { Link } from 'react-router-dom';
 class ServerShow extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            channel: null
+        }
 
         this.renderTextChannelList = this.renderTextChannelList.bind(this);
         this.selectActiveChannel = this.selectActiveChannel.bind(this);
         this.displayChannelForm = this.displayChannelForm.bind(this);
         this.displayUserSettings = this.displayUserSettings.bind(this);
+        this.loadNewChannel = this.loadNewChannel.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchServer(this.props.serverId);
+        this.props.fetchChannel(this.props.channelId);
+        this.setState({channel: this.props.channel})
     }
 
     selectActiveChannel(id) {
@@ -26,21 +32,31 @@ class ServerShow extends React.Component {
         }
     }
 
+    loadNewChannel(id) {
+        this.props.removeChannel(this.props.channelId);
+        this.props.fetchChannel(id);
+    }
+
     renderTextChannelList() {
-        return (
-            <ul className='server-channel-list'>
-                {
-                    this.props.server.serverChannels.map(channel => {
-                        return (
-                            <Link to={`/channels/${this.props.serverId}/${channel.id}`} className={this.selectActiveChannel(channel.id)}>
-                                <i className="fas fa-hashtag"></i>
-                                <p>{channel.name}</p>
-                            </Link>
-                        )
-                    })
-                }
-            </ul>
-        )
+        if (this.props.server.serverChannels) {
+            return (
+                <ul className='server-channel-list'>
+                    {
+                        this.props.server.serverChannels.map(channel => {
+                            return (
+                                <Link to={`/channels/${this.props.serverId}/${channel.id}`} className={this.selectActiveChannel(channel.id)} onClick={() => this.loadNewChannel(channel.id)}>
+                                    <i className="fas fa-hashtag"></i>
+                                    <p>{channel.name}</p>
+                                </Link>
+                            )
+                        })
+                    }
+                </ul>
+            )
+        } else {
+            return null;
+        }
+        
     }
 
     renderChannelListHeader() {
@@ -71,7 +87,8 @@ class ServerShow extends React.Component {
     }
     
     render() {
-        if (this.props.server) {
+        console.dir(this.props);
+        if (this.props.server && this.props.channel) {
             return (
                 <div className='server'>
                     <div className='server-panel'>

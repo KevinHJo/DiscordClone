@@ -16,8 +16,9 @@ const receiveChannel = channel => ({
     channel
 });
 
-const removeChannel = () => ({
-    type: REMOVE_CHANNEL
+export const removeChannel = (channelId) => ({
+    type: REMOVE_CHANNEL,
+    channelId
 });
 
 const receiveChannelErrors = errors => ({
@@ -48,6 +49,6 @@ export const createChannel = channel => dispatch => (
 
 export const deleteChannel = channelId => dispatch => (
     ChannelAPIUtil.removeChannel(channelId).then(() => (
-        dispatch(removeChannel())
+        dispatch(removeChannel(channelId))
     ))
 );
