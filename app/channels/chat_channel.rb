@@ -1,6 +1,5 @@
 class ChatChannel < ApplicationCable::Channel
   def subscribed
-    # stream_from "some_channel"
     stream_for "chat_channel_#{params['threadId']}"
     self.load
   end

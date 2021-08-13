@@ -14,6 +14,7 @@ Server.destroy_all
 
 kevin = User.create!({username: 'kevin', email: 'kevin@email.com', password: 'password'})
 rachael = User.create!({username: 'rachael', email: 'rachael@email.com', password: 'password'})
+demo_user = User.create!({username: 'demo', email: 'demo@email.com', password: 'password'})
 anne = User.create!({username: 'anne', email: 'anne@email.com', password: 'password'})
 jacob = User.create!({username: 'jacob', email: 'jacob@email.com', password: 'password'})
 dante = User.create!({username: 'dante', email: 'dante@email.com', password: 'password'})
@@ -32,6 +33,7 @@ smeagol = User.create!({username: 'Smeagol', email: 'friendly@myprecious.com', p
 gollum = User.create!({username: 'Gollum', email: 'notsofriendly@myprecious.com', password: 'password'})
 
 lotr = Server.create!(name: 'LoTR', owner_id: kevin.id)
+demo_server = Server.create!(name: 'Demo Server', owner_id: demo_user.id)
 
 ServerUser.create!([{
     server_id: lotr.id,
@@ -88,12 +90,24 @@ ServerUser.create!([{
 {
     server_id: lotr.id,
     user_id: gollum.id
+},
+{
+    server_id: demo_server.id,
+    user_id: demo_user.id
+},
+{
+    server_id: demo_server.id,
+    user_id: kevin.id
+},
+{
+    server_id: demo_server.id,
+    user_id: rachael.id
 }
 ])
 
 council_of_elrond = Channel.create!(name: 'Council of Elrond', server_id: lotr.id, private: false)
 potato = Channel.create!(name: 'Po-tay-toes', server_id: lotr.id, private: false)
-
+demo_channel_1 = Channel.create!(name: 'Demo Channel 1', server_id: demo_server.id, private: false)
 
 ChannelUser.create!([{
     channel_id: council_of_elrond.id,
@@ -162,6 +176,18 @@ ChannelUser.create!([{
 {
     channel_id: potato.id,
     user_id: gollum.id
+},
+{
+    channel_id: demo_channel_1.id,
+    user_id: demo_user.id
+},
+{
+    channel_id: demo_channel_1.id,
+    user_id: kevin.id
+},
+{
+    channel_id: demo_channel_1.id,
+    user_id: rachael.id
 }
 ])
 
