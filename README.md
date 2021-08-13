@@ -39,6 +39,10 @@ class ChatChannel < ApplicationCable::Channel
 end
 ```
 ### Servers and Channels
-An extremely important component of Discord Clone is the structure involved in servers and channels. In the rails backend, channels have a foreign id linking them to servers. I also included joins tables for both server users and channel users. In the future, this will help determine whether a logged in user can view and enter a server as well as determine whether a logged in user can view and enter a channel within a server. When creating a channel, the frontend will display a form component with a local state that's been populated using the current server's id as the server_id.
+An extremely important component of Discord Clone is the structure involved in servers and channels. In the rails backend, channels have a foreign id linking them to servers. I also included joins tables for both server users and channel users. In the future, this will help determine whether a logged in user can view and enter a server as well as determine whether a logged in user can view and enter a channel within a server.
 
-![image](./app/assets/images/discord_app_channel_creation.png)
+When creating a channel, the frontend will display a modal form component with a local state that's been populated using the current server's id as the server_id. When the form is submitted, the channel is inserted into the database, and the page rerenders to display the new component. 
+
+![image](https://github.com/KevinHJo/DiscordClone/blob/main/app/assets/images/discord_app_channel_creation.PNG)
+
+**Future implementations: Server Creation will work similarly
