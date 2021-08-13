@@ -64,7 +64,7 @@ class ChannelShow extends React.Component {
 
                     <div className='channel-nav'>
                         <li className={'user-list-icon active'} onClick={this.toggleUserList}>
-                            <i class="fas fa-user-friends"></i>
+                            <i className="fas fa-user-friends"></i>
                         </li>
                     </div>
                 </div>

@@ -11,7 +11,8 @@ class ChannelForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.updateName = this.updateName.bind(this);
-        this.updatePrivate = this.updatePrivate.bind(this);
+        // this.updatePrivate = this.updatePrivate.bind(this);
+        this.closeForm = this.closeForm.bind(this);
     }
 
     handleSubmit(e) {
@@ -24,9 +25,15 @@ class ChannelForm extends React.Component {
         this.setState({name: e.target.value})
     }
 
-    updatePrivate(e) {
-        e.preventDefault;
-        this.setState()
+    // updatePrivate(e) {
+    //     e.preventDefault();
+    //     this.setState()
+    // }
+
+    closeForm(e) {
+        e.preventDefault();
+        const channelForm = document.getElementsByClassName('channel-form-container')[0];
+        channelForm.style.display = 'none'
     }
 
     render() {
@@ -38,7 +45,7 @@ class ChannelForm extends React.Component {
                             <h2>Create text channel</h2>
                             <h3>in Text Channels</h3>
                         </div>
-                        <div className='close-channel-form'>
+                        <div className='close-channel-form' onClick={this.closeForm}>
                             <i className="fas fa-times"></i>
                         </div>
                     </span>
@@ -57,8 +64,9 @@ class ChannelForm extends React.Component {
                             </div>
                             <input type="checkbox" checked={this.state.private} onChange={this.updatePrivate}/>
                         </div> */}
+
                         <div className='channel-form-footer'>
-                            <button className='close-channel-form'>Cancel</button>
+                            <button className='close-channel-form' onClick={this.closeForm}>Cancel</button>
                             <input type="submit" value='Create channel'/>
                         </div>
                         

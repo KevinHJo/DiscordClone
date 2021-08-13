@@ -1,5 +1,5 @@
 .channel-form-container {
-    display: block;
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -86,6 +86,12 @@
     width: 20.5vw;
     padding-left: 2vw;
     margin-left: 1vw;
+    color: white;
+    font-size: 1.25vh;
+}
+
+.input-wrapper input[type='text']:focus {
+    border: 1px solid black;
 }
 
 .private-checkbox {
