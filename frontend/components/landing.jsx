@@ -7,6 +7,7 @@ class LandingPage extends React.Component {
       <div className='landing-page'>
         <div className='landing-page-banner'>
           <div className='landing-page-nav'>
+            <img src="https://github.com/KevinHJo/DiscordClone/blob/main/app/assets/images/discord-logo.png?raw=true" />
             <Link to="/login">Login</Link>
           </div>
 
