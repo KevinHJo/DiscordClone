@@ -10,7 +10,9 @@ class ServerIndex extends React.Component {
         return (
             <div className='server-list-container'>
                 <div className='server-home'>
-                    <img src={'/images/pfp.png'} />
+                    <Link to={'/channels/@me'}>
+                        <img src={'/images/pfp.png'} />
+                    </Link>
                 </div>
                 <ul className='server-list'>
                     {this.props.userServers.map(server => {
