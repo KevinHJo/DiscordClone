@@ -4,15 +4,88 @@
   height: 100%;
 }
 
-.banner-container {
-  /* background-color: rgb(64,78,237); */
-  height: 75vh;
+.landing-page-banner {
+  background-color: rgb(64,78,237);
+  height: 626px;
+  width: 100%;
 }
 
-.landing-page-banner {
-  background-image: url('https://github.com/KevinHJo/DiscordClone/blob/main/app/assets/images/landing_page_banner.jpeg?raw=true');
-  background-repeat: no-repeat;
-  background-size: auto;
-  height: 100%;
-  width: 100%
+.landing-page-nav {
+  z-index: 1;
+  height: 80px;
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.landing-page-nav a {
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  height: 17px;
+  padding: 10px 17px 10px 17px;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 17px;
+  font-size: 15px;
+}
+
+.banner-message {
+  color: white;
+  margin: auto;
+  width: 1080px;
+  text-align: center;
+  margin-top: 90px;
+  z-index: 1;
+}
+
+.banner-imagine {
+  font-family: 'Sigmar One', cursive;
+  font-size: 58px;
+}
+
+.banner-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  margin: auto;
+  margin-top: 30px;
+  width: 750px;
+  line-height: 40px;
+}
+
+.banner-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 626px;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.banner-clouds {
+  position: absolute;
+  left: 50%;
+  margin-left: -1280px;
+}
+
+.banner-element-2 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  height: auto;
+  width: auto;
+  margin-left: -1030px;
+}
+
+.banner-element-1 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  margin-left: 370px;
 }
