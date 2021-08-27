@@ -16,8 +16,19 @@
   width: 1200px;
   margin: auto;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+}
+
+.landing-page-nav img {
+  filter: brightness(0) invert(1);
+  height: 33px;
+  z-index: 1;
+}
+
+.landing-page-nav img:hover {
+  cursor: pointer;
 }
 
 .landing-page-nav a {
@@ -31,6 +42,13 @@
   text-align: center;
   line-height: 17px;
   font-size: 15px;
+  z-index: 1;
+}
+
+.landing-page-nav a:hover {
+  cursor: pointer;
+  color: blue;
+  box-shadow: 5px 5px 20px rgb(70, 74, 122);
 }
 
 .banner-message {
