@@ -1,10 +1,12 @@
 .landing-page {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100%;
+  overflow: auto;
 }
 
 .landing-page-banner {
+  display: block;
   background-color: rgb(64,78,237);
   height: 626px;
   width: 100%;
@@ -21,6 +23,10 @@
   align-items: center;
 }
 
+.landing-home-link {
+  z-index: 1;
+}
+
 .landing-page-nav img {
   filter: brightness(0) invert(1);
   height: 33px;
@@ -31,7 +37,7 @@
   cursor: pointer;
 }
 
-.landing-page-nav a {
+.landing-login {
   font-family: 'Open Sans', sans-serif;
   text-decoration: none;
   color: black;
@@ -45,7 +51,7 @@
   z-index: 1;
 }
 
-.landing-page-nav a:hover {
+.landing-login:hover {
   cursor: pointer;
   color: blue;
   box-shadow: 5px 5px 20px rgb(70, 74, 122);
@@ -106,4 +112,22 @@
   left: 50%;
   display: block;
   margin-left: 370px;
+}
+
+.work-in-progress-1, .work-in-progress-3 {
+  height: 626px;
+  background-color: white;
+}
+
+.work-in-progress-2 {
+  height: 626px;
+  background-color: rgb(246,246,246);
+}
+
+.wip-message {
+  font-family: 'Sigmar One', cursive;
+  font-size: 50px;
+  text-align: center;
+  padding: 100px;
+  margin-top: 150px;
 }
