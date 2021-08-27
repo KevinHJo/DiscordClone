@@ -1,0 +1,18 @@
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.banner-container {
+  /* background-color: rgb(64,78,237); */
+  height: 75vh;
+}
+
+.landing-page-banner {
+  background-image: url('https://github.com/KevinHJo/DiscordClone/blob/main/app/assets/images/landing_page_banner.jpeg?raw=true');
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 100%;
+  width: 100%
+}
