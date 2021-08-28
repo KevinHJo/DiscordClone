@@ -6,6 +6,10 @@ class Api::ServersController < ApplicationController
             @servers = Server.all
         end
 
+        @channels = {};
+        @servers.each do |server|
+            @channels[server.id] = server.channels
+        end
         render 'api/servers/index'
     end
 

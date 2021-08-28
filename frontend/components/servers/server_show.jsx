@@ -20,7 +20,7 @@ class ServerShow extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchServer(this.props.serverId);
+        this.props.fetchUserServers(this.props.currentUser.id);
         // this.props.fetchUserServers(this.props.currentUser.id);
         this.props.fetchChannel(this.props.channelId);
         this.setState({channel: this.props.channel})
