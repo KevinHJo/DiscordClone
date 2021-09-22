@@ -5,7 +5,7 @@ class ChannelForm extends React.Component {
         super(props);
         this.state = {
             name: '',
-            server_id: this.props.server_id,
+            server_id: this.props.serverId,
             private: false
         }
 
@@ -17,6 +17,7 @@ class ChannelForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        debugger
         this.props.createChannel(this.state);
     }
 
@@ -54,7 +55,7 @@ class ChannelForm extends React.Component {
                         <h3>CHANNEL NAME</h3>
                         <div className='input-wrapper'>
                             <i className="fas fa-hashtag"></i>
-                            <input type="text" value='' placeholder='new-channel' onChange={this.updateName}/>
+                            <input type="text" defaultValue='' placeholder='new-channel' onChange={this.updateName}/>
                         </div>
                         
                         {/* <div className='private-checkbox'>

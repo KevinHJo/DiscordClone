@@ -1,8 +1,12 @@
 // // Place all the styles related to the api::posts controller here.
 // // They will automatically be included in application.css.
 // // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post-wall {
+    flex: 1 0 auto;
+}
+
 .posts {
-    background-color: rgb(54,57,63);
     color: rgb(220,221,222);
     height: 95vh;
     position: relative;
@@ -11,6 +15,7 @@
 .post-history {
     overflow-y: scroll;
     max-height: 90vh;
+    max-width: 100%;
 }
 
 .post-item {
@@ -113,11 +118,9 @@
 .post-form input[type='text'] {
     background-color: rgb(64,68,75);
     padding: 0.75vh 2vh 0.75vh 2vh;
-    width: 76vw;
+    width: 90%;
     height: 1.75vh;
-    position: absolute;
-    left: 1vw;
-    bottom: 2vh;
+    margin-left: 20px;
     caret-color: white;
     font-size: 1.25vh;
     font-family: filetto-regular;

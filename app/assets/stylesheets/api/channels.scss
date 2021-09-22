@@ -1,13 +1,15 @@
 // Place all the styles related to the channels controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.channel {
+    flex: 1 0 auto;
+}
 
 .channel-header {
     display: flex;
     background-color: rgb(54,57,63);
     height: 5vh;
     border-bottom: 0.1vh solid black;
-    width: 84vw;
     justify-content: space-between;
 }
 
@@ -53,11 +55,13 @@
     display: flex;
     position: relative;
     height: 95vh;
+    width: 100%;
+    background-color: rgb(54,57,63);
 }
 
-.post-wall {
-    width: 84vw;
-}
+// .post-wall {
+//     width: 84vw;
+// }
 
 .channel-users {
     height: 95vh;
@@ -65,8 +69,8 @@
     background: rgb(47,49,54);
     color: white;
     border-left: 0.2vw solid rgb(54,57,63);
-    position: absolute;
-    right: 0vw;
+    // position: absolute;
+    // right: 0vw;
 }
 
 

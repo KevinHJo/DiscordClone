@@ -6,7 +6,7 @@
 }
 
 .server-panel {
-    width: 12vw;
+    min-width: 250px;
     position: relative;
 }
 
@@ -86,7 +86,7 @@
 
 .user-panel {
     height: 5vh;
-    width: 12vw;
+    min-width: 250px;
     display: flex;
     position: absolute;
     bottom: 0vh;
@@ -109,7 +109,7 @@
     color: rgb(185,187,190);
     display: flex;
     padding-top: 1.8vh;
-    padding-left: 6vw;
+    padding-left: 100px;
 }
 
 .user-settings-nav i {
