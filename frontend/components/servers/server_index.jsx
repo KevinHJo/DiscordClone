@@ -18,7 +18,7 @@ class ServerIndex extends React.Component {
                         <p>Home</p>
                     </div>
                 </div>
-                <div id='server-spacer'>' '</div>
+                <div id='server-spacer'> </div>
                 <ul className='server-list'>
                     {this.props.userServers.map(server => {
                         return (
