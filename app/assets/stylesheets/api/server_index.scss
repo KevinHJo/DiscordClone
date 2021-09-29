@@ -1,13 +1,20 @@
 .server-list-container {
     background-color: rgb(32,34,37);
     height: 100vh;
-    width: 4vw;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .server-list-container img {
-    margin-left: 1.5vh;
-    height: 5vh;
-    margin-top: 1vh;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(88,101,242);
+    padding: 10px;
+    border-radius: 50%;
 }
 
 .server-home, .server-list {
@@ -17,27 +24,63 @@
 .server-home {
     padding-top: 1vh;
     padding-bottom: 0.5vh;
-    border-bottom: 0.3vh solid rgb(45,47,50);
+    display: flex;
+    align-items: center;
 }
 
-.server-link-name {
-    display: none;
-    color: white;
-    font-size: 1.5vh;
-    padding: 0.5vh;
-    border-radius: 0.5vh;
+.server-home:hover > .server-link-name {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    max-height: 20px;
+    min-width: 300px;
+    z-index: 2;
+}
+
+#server-spacer {
+    height: 0;
+    width: 30px;
+    border: 1px solid rgb(72, 75, 78);
+}
+
+.server-list img {
+    margin-top: 10px;
 }
 
 .server-list > li {
     position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.server-link-name {
+    display: none;
+    color: rgb(214, 214, 214);
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+#label-triangle {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid black;
+}
+
+.server-link-name p {
+    background-color: black;
+    border-radius: 7px;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .server-list > li:hover > .server-link-name {
+    display: flex;
+    align-items: center;
     cursor: pointer;
-    display: block;
-    background-color: black;
-    position: absolute;
-    top: 2.25vh;
-    right: -4vw;
+    max-height: 20px;
+    min-width: 300px;
     z-index: 2;
 }
