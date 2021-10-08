@@ -27,7 +27,10 @@ class User < ApplicationRecord
 
     has_many :channel_users
     has_many :channels, through: :channel_users
-    
+
+    has_many :user_friends
+    has_many :friends, through: :user_friends
+
     attr_reader :password
 
     def self.find_by_credentials(email, password)
