@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+UserFriend.destroy_all
 Post.destroy_all
 Channel.destroy_all
 ChannelUser.destroy_all
@@ -31,6 +32,13 @@ merry = User.create!({username: 'Merry', email: 'thing1@theshire.com', password:
 pippin = User.create!({username: 'Pippin', email: 'thing2@theshire.com', password: 'password'})
 smeagol = User.create!({username: 'Smeagol', email: 'friendly@myprecious.com', password: 'password'})
 gollum = User.create!({username: 'Gollum', email: 'notsofriendly@myprecious.com', password: 'password'})
+
+demo_user_friend_1 = UserFriend.create!({user_id: demo_user.id, friend_id: kevin.id})
+demo_user_friend_2 = UserFriend.create!({user_id: demo_user.id, friend_id: rachael.id})
+demo_user_friend_3 = UserFriend.create!({user_id: demo_user.id, friend_id: anne.id})
+demo_user_friend_4 = UserFriend.create!({user_id: demo_user.id, friend_id: jacob.id})
+demo_user_friend_5 = UserFriend.create!({user_id: demo_user.id, friend_id: dante.id})
+demo_user_friend_6 = UserFriend.create!({user_id: demo_user.id, friend_id: ethan.id})
 
 lotr = Server.create!(name: 'LoTR', owner_id: kevin.id)
 demo_server = Server.create!(name: 'Demo Server', owner_id: demo_user.id)
