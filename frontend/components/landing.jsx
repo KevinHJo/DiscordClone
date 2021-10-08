@@ -38,16 +38,19 @@ class LandingPage extends React.Component {
           </div>
         </div>
 
-        <div className='work-in-progress-1'>
-          <h1 className='wip-message'>More Panels Coming! :)</h1>
+        <div className='landing-panel-1'>
+          <h1 className='landing-panel-message'>Create your own Personal Space!</h1>
+          <img src="" alt="" />
         </div>
 
-        <div className='work-in-progress-2'>
-          <h1 className='wip-message'>More Panels Coming! :)</h1>
+        <div className='landing-panel-2'>
+          <h1 className='landing-panel-message'>All of your friends in one place!</h1>
+          <img src="" alt="" />
         </div>
         
-        <div className='work-in-progress-3'>
-          <h1 className='wip-message'>More Panels Coming! :)</h1>
+        <div className='landing-panel-3'>
+          <h1 className='landing-panel-message'>Instant messaging with your favorite people!</h1>
+          <img src="" alt="" />
         </div>
       </div>
     )

@@ -114,17 +114,24 @@
   margin-left: 370px;
 }
 
-.work-in-progress-1, .work-in-progress-3 {
+.landing-panel-1, .landing-panel-3 {
   height: 626px;
   background-color: white;
+  display: flex;
+  justify-content: space-evenly;
 }
+
+/* .work-in-progress-1, .work-in-progress-3 {
+  height: 626px;
+  background-color: white;
+} */
 
 .work-in-progress-2 {
   height: 626px;
   background-color: rgb(246,246,246);
 }
 
-.wip-message {
+.landing-panel-message {
   font-family: 'Sigmar One', cursive;
   font-size: 50px;
   text-align: center;
