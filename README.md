@@ -1,6 +1,6 @@
 # Discord (Clone)
 
-[DiscordClone](https://discord-kevin.herokuapp.com/#/login) is a platform where users can communicate and interact with friends around the world. It provides custom spaces where users can chat with each other in real time.
+[DiscordClone](https://discord-kevin.herokuapp.com/#/) is a platform where users can communicate and interact with friends around the world. It provides custom spaces where users can chat with each other in real time.
 
 ## Table of Contents
 + [Technologies](#technologies)
