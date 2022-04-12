@@ -80,6 +80,13 @@ class SessionForm extends React.Component {
         }
     }
 
+    loginDemoUser() {
+        this.props.login({
+            email: 'demo@email.com',
+            password: 'password'
+        })
+    }
+
     render() {
         const {formType} = this.props;
         return (
@@ -110,7 +117,11 @@ class SessionForm extends React.Component {
                         </div>
 
                         <button type="submit">{formType}</button>
-                        {this.props.navLink}
+                        <div id='nav-container'>
+                            {this.props.navLink}
+                            <a id='demo-login-button' onClick={this.loginDemoUser.bind(this)}>Try a Demo
+                            </a>
+                        </div>
                     </div>
                 </form>
             </div>

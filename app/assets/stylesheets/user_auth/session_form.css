@@ -104,6 +104,11 @@ form button:active {
     background-color: rgb(60,69,165);
 }
 
+#nav-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 .nav {
     font-size: 1.3vh;
     color: rgb(106,110,117);
@@ -118,5 +123,17 @@ form button:active {
 }
 
 .nav a:hover {
+    text-decoration: underline;
+}
+
+#demo-login-button {
+    color: rgb(3,167,232);
+    margin: 0;
+    font-family: filetto-regular;
+    font-size: 1.3vh;
+}
+
+#demo-login-button:hover {
+    cursor: pointer;
     text-decoration: underline;
 }
