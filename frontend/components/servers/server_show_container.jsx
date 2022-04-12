@@ -5,6 +5,7 @@ import { createChannel, fetchChannel, removeChannel } from "../../actions/channe
 import { logout } from '../../actions/session_actions'
 
 const mSTP = (state, { match }) => {
+    // debugger
     return {
     channelId: parseInt(match.params.channelId),
     serverId: parseInt(match.params.serverId),

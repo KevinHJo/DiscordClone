@@ -100,6 +100,10 @@ ServerUser.create!([{
     user_id: gollum.id
 },
 {
+    server_id: lotr.id,
+    user_id: demo_user.id
+},
+{
     server_id: demo_server.id,
     user_id: demo_user.id
 },
@@ -544,5 +548,21 @@ Post.create!([{
     body: 'You\'re hopeless.',
     author_id: sam.id,
     channel_id: potato.id
+}])
+
+Post.create!([{
+    body: 'testing',
+    author_id: demo_user.id,
+    channel_id: demo_channel_1.id
+},
+{
+    body: 'hello',
+    author_id: kevin.id,
+    channel_id: demo_channel_1.id
+},
+{
+    body: 'hello there',
+    author_id: rachael.id,
+    channel_id: demo_channel_1.id
 }])
 
