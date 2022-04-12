@@ -12,8 +12,20 @@ class HomePage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div id="home-page-container">
                 <ServerIndexContainer userServers={this.props.userServers}/>
+
+                <div id="dm-index">
+
+                </div>
+                
+                <div id="home-page">
+                    
+                </div>
+
+                <div id="friends-list">
+
+                </div>
             </div>
         )
     }

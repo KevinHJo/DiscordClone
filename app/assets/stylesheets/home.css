@@ -1,0 +1,19 @@
+#home-page-container {
+  display: flex;
+}
+
+#dm-index {
+  flex-grow: 0.3;
+  background-color: rgb(47,49,54);
+}
+
+#home-page {
+  flex-grow: 3;
+  background-color: rgb(54,57,63);
+  overflow-y: scroll;
+}
+
+#friends-list {
+  flex-grow: 0.5;
+  background-color: rgb(54,57,63);
+}
