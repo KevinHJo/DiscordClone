@@ -2,13 +2,14 @@ import { RECEIVE_POST, RECEIVE_POSTS, REMOVE_POST } from '../../actions/post_act
 
 const PostsReducer = (state = {}, action) => {
     Object.freeze(state);
-    const nextState = Object.assign({}, state);
+    let nextState = Object.assign({}, state);
 
     switch (action.type) {
         case RECEIVE_POST:
             nextState[action.post.id] = action.post;
             return nextState;
         case RECEIVE_POSTS:
+            nextState = {};
             action.posts.forEach(post => nextState[post.id] = post);
             return nextState;
         case REMOVE_POST:

@@ -11,6 +11,7 @@ class ChatChannel < ApplicationCable::Channel
   end
 
   def load
+    # debugger
     channel = Channel.find(params['threadId'])
     posts = channel.posts
     users = channel.users

@@ -17,7 +17,7 @@ class ChannelForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        debugger
+        // debugger
         this.props.createChannel(this.state);
     }
 
