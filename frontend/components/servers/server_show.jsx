@@ -21,7 +21,6 @@ class ServerShow extends React.Component {
 
     componentDidMount() {
         this.props.fetchUserServers(this.props.currentUser.id);
-        // this.props.fetchUserServers(this.props.currentUser.id);
         this.props.fetchChannel(this.props.channelId);
         this.setState({channel: this.props.channel})
     }
@@ -115,6 +114,7 @@ class ServerShow extends React.Component {
 
                             <nav className='user-settings-nav'>
                                 <i className="fas fa-cog" onClick={this.displayUserSettings}></i>
+                                {/* <div className="fas fa-cog" onClick={this.displayUserSettings}></div> */}
                             </nav>
                         </div>
                     </div>

@@ -121,6 +121,18 @@
     color: white;
 }
 
+// TESTING
+.user-settings-nav div {
+    width: 10px;
+    background-color: red;
+}
+
+.user-settings-nav div:hover {
+    cursor: pointer;
+    color: white;
+}
+//END TESTING
+
 //SCROLLBAR
 ::-webkit-scrollbar {
     width: 0.3vw;

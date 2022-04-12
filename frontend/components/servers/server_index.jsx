@@ -23,7 +23,7 @@ class ServerIndex extends React.Component {
                     {this.props.userServers.map(server => {
                         return (
                             <li>
-                                <Link to={`/channels/${server.id}/1`}><img src={'/images/default_pfp.png'}/></Link>
+                                <Link to={`/channels/${server.id}/${server.serverChannels[0].id}`}><img src={'/images/default_pfp.png'}/></Link>
                                 <div className='server-link-name'>
                                     <div id='label-triangle'></div>
                                     <p>{server.name}</p>
